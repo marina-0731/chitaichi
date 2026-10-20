@@ -22,6 +22,16 @@
 <meta property="og:locale" content="ja_JP">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="assets/logo.png" type="image/png">
+<link rel="canonical" href="https://chitaichi.co.jp/">
+<link rel="alternate" hreflang="ja" href="https://chitaichi.co.jp/">
+<link rel="alternate" hreflang="en" href="https://chitaichi.co.jp/en/">
+<link rel="alternate" hreflang="zh-Hant" href="https://chitaichi.co.jp/zh-hant/">
+<link rel="alternate" hreflang="zh-Hans" href="https://chitaichi.co.jp/zh-hans/">
+<link rel="alternate" hreflang="ko" href="https://chitaichi.co.jp/ko/">
+<link rel="alternate" hreflang="pt-BR" href="https://chitaichi.co.jp/pt/">
+<link rel="alternate" hreflang="vi" href="https://chitaichi.co.jp/vi/">
+<link rel="alternate" hreflang="fil" href="https://chitaichi.co.jp/fil/">
+<link rel="alternate" hreflang="x-default" href="https://chitaichi.co.jp/">
 <style>
   @import url('https://fonts.googleapis.com/css2?family=BIZ+UDPMincho:wght@400;700&display=swap');
 
@@ -132,7 +142,7 @@
     max-height:0;overflow:hidden;
     transition:max-height .3s ease;
   }
-  .nav-panel.open{max-height:680px;}
+  .nav-panel.open{max-height:900px;}
   .nav-panel ul{list-style:none;display:flex;flex-direction:column;padding:6px 24px 18px;}
   .nav-panel a{
     display:block;padding:13px 0;color:var(--white);font-size:0.92rem;letter-spacing:0.08em;
@@ -422,6 +432,36 @@
   .member-alias{display:block;font-size:0.78rem;letter-spacing:0.1em;font-weight:400;color:rgba(250,247,242,0.75);margin-top:2px;}
   .member-en{font-family:inherit;font-size:0.6rem;letter-spacing:0.22em;color:rgba(250,247,242,0.5);margin-top:2px;}
   .member-note{font-size:0.66rem;color:rgba(217,190,127,0.8);margin-top:6px;letter-spacing:0.06em;}
+
+  /* ===== Language switcher ===== */
+  .nav-wrap{gap:10px;}
+  .brand{flex:1;}
+  .lang-menu{position:relative;flex-shrink:0;}
+  .lang-menu summary{
+    list-style:none;cursor:pointer;display:flex;align-items:center;gap:6px;
+    padding:5px 10px;border:1px solid rgba(184,147,63,0.6);color:var(--gold-light);
+    font-size:0.72rem;letter-spacing:0.06em;white-space:nowrap;
+  }
+  .lang-menu summary::-webkit-details-marker{display:none;}
+  .lang-menu .lang-icon{font-size:0.7rem;opacity:0.85;}
+  .lang-menu[open] summary{background:rgba(184,147,63,0.12);}
+  .lang-menu ul{
+    position:absolute;right:0;top:calc(100% + 6px);z-index:200;list-style:none;min-width:150px;
+    background:rgba(12,12,12,0.98);border:1px solid rgba(184,147,63,0.5);padding:6px 0;
+    box-shadow:0 12px 30px rgba(0,0,0,0.5);
+  }
+  .lang-menu li a{display:block;padding:8px 16px;font-size:0.82rem;color:var(--white);letter-spacing:0.04em;}
+  .lang-menu li a:hover{color:var(--gold-light);background:rgba(184,147,63,0.08);}
+  .lang-menu li a[aria-current="page"]{color:var(--gold-light);}
+  .lang-menu li a[aria-current="page"]::before{content:"・";}
+  @container site (max-width:400px){
+    .lang-menu .lang-current{display:none;}
+  }
+  .nav-langs{padding:4px 24px 20px;border-top:1px solid rgba(184,147,63,0.25);}
+  .nav-langs-label{display:block;font-size:0.62rem;letter-spacing:0.3em;color:var(--gold);margin:12px 0 8px;}
+  .nav-langs-list{display:flex;flex-wrap:wrap;gap:8px;}
+  .nav-langs-list a{font-size:0.78rem;color:var(--white);padding:4px 10px;border:1px solid rgba(250,247,242,0.18);}
+  .nav-langs-list a[aria-current="page"]{border-color:var(--gold);color:var(--gold-light);}
 </style>
 </head>
 <body>
@@ -436,6 +476,19 @@
       <img src="assets/logo.png" alt="知多壱ロゴ">
       <div class="brand-text">株式会社知多壱<small>CHITA-ICHI CO., LTD. (準備中)</small></div>
     </div>
+    <details class="lang-menu" data-noi18n>
+      <summary aria-label="Language / 言語"><span class="lang-icon" aria-hidden="true">文A</span><span class="lang-current">日本語</span></summary>
+      <ul>
+        <li><a href="/" lang="ja" hreflang="ja" aria-current="page">日本語</a></li>
+        <li><a href="/en/" lang="en" hreflang="en">English</a></li>
+        <li><a href="/zh-hant/" lang="zh-Hant" hreflang="zh-Hant">繁體中文</a></li>
+        <li><a href="/zh-hans/" lang="zh-Hans" hreflang="zh-Hans">简体中文</a></li>
+        <li><a href="/ko/" lang="ko" hreflang="ko">한국어</a></li>
+        <li><a href="/pt/" lang="pt-BR" hreflang="pt-BR">Português</a></li>
+        <li><a href="/vi/" lang="vi" hreflang="vi">Tiếng Việt</a></li>
+        <li><a href="/fil/" lang="fil" hreflang="fil">Filipino</a></li>
+      </ul>
+    </details>
     <button class="nav-toggle" id="navToggle" aria-label="メニューを開く" aria-expanded="false" onclick="toggleNav()">
       <span></span><span></span><span></span>
     </button>
@@ -454,6 +507,19 @@
       <li><a href="#members" onclick="closeNav()">メンバー</a></li>
       <li><a href="#contact" onclick="closeNav()">お問い合わせ</a></li>
     </ul>
+    <div class="nav-langs" data-noi18n>
+      <span class="nav-langs-label">LANGUAGE</span>
+      <div class="nav-langs-list">
+          <a href="/" lang="ja" hreflang="ja" aria-current="page">日本語</a>
+          <a href="/en/" lang="en" hreflang="en">English</a>
+          <a href="/zh-hant/" lang="zh-Hant" hreflang="zh-Hant">繁體中文</a>
+          <a href="/zh-hans/" lang="zh-Hans" hreflang="zh-Hans">简体中文</a>
+          <a href="/ko/" lang="ko" hreflang="ko">한국어</a>
+          <a href="/pt/" lang="pt-BR" hreflang="pt-BR">Português</a>
+          <a href="/vi/" lang="vi" hreflang="vi">Tiếng Việt</a>
+          <a href="/fil/" lang="fil" hreflang="fil">Filipino</a>
+      </div>
+    </div>
   </nav>
 </header>
 
@@ -734,26 +800,26 @@
       <div class="member-card">
         <div class="member-plate"><img src="assets/member-uchida.png" alt="内田かいりのイラスト" loading="lazy"></div>
         <div class="member-role">CEO</div>
-        <div class="member-name">内田 かいり</div>
+        <div class="member-name" data-noi18n>内田 かいり</div>
         <div class="member-en">KAIRI UCHIDA</div>
       </div>
       <div class="member-card">
         <div class="member-plate"><img src="assets/member-tsuchiya.png" alt="土屋真理奈（安土真理奈）のイラスト" loading="lazy"></div>
         <div class="member-role">COO</div>
-        <div class="member-name">土屋 真理奈<span class="member-alias">（安土 真理奈）</span></div>
+        <div class="member-name" data-noi18n>土屋 真理奈<span class="member-alias">（安土 真理奈）</span></div>
         <div class="member-en">MARINA TSUCHIYA</div>
       </div>
       <div class="member-card">
         <div class="member-plate"><img src="assets/member-matsuzaki.png" alt="松﨑旭洋のイラスト" loading="lazy"></div>
         <div class="member-role">CTO</div>
-        <div class="member-name">松﨑 旭洋</div>
+        <div class="member-name" data-noi18n>松﨑 旭洋</div>
         <div class="member-en">AKIHIRO MATSUZAKI</div>
         <div class="member-note">Dragon Brewing 理事</div>
       </div>
       <div class="member-card">
         <div class="member-plate"><img src="assets/member-toyama.png" alt="とやまあやこのイラスト" loading="lazy"></div>
         <div class="member-role">CHO</div>
-        <div class="member-name">とやま あやこ</div>
+        <div class="member-name" data-noi18n>とやま あやこ</div>
         <div class="member-en">AYAKO TOYAMA</div>
       </div>
     </div>
@@ -778,7 +844,7 @@
 <footer>
   <div class="gold-line"></div>
   <p class="alcohol-note">20歳未満の飲酒は法律で禁止されています。<br>知多壱は現在、酒類製造免許の取得を目指して準備を進めている段階で、お酒の製造・販売は行っていません。</p>
-  &copy; 2026 株式会社知多壱（設立準備中） All Rights Reserved.
+  <span class="copyright">&copy; 2026 株式会社知多壱（設立準備中） All Rights Reserved.</span>
 </footer>
 
 </div><!-- /.site-frame -->
@@ -791,6 +857,11 @@
     btn.classList.toggle('open', isOpen);
     btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
   }
+  // 言語メニューは、外側を押したら閉じる
+  document.addEventListener('click', function(e){
+    var m = document.querySelector('.lang-menu');
+    if(m && m.open && !m.contains(e.target)){ m.open = false; }
+  });
   function closeNav(){
     document.getElementById('navToggle').classList.remove('open');
     document.getElementById('navPanel').classList.remove('open');
