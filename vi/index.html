@@ -1,0 +1,878 @@
+<!DOCTYPE html>
+<script type="application/json" id="cowork-artifact-meta">
+{
+  "name": "Chitaichi Homepage",
+  "schemaVersion": 1,
+  "description": "株式会社知多壱（設立準備中）の会社ホームページ。知多半島・南知多町でサトウキビを育て、サトウキビ酒づくりを目指す。黒・赤・白・金を基調にした和モダンのデザイン。",
+  "mcpTools": [],
+  "mcpServerNames": []
+}
+</script>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chitaichi Co., Ltd. (đang thành lập) | Từ mảnh đất này, gây dựng ngành nghề tương lai.</title>
+<meta name="description" content="Trang chủ của Chitaichi Co., Ltd. (đang thành lập) – trồng mía trên đất nông nghiệp bị bỏ hoang tại thị trấn Minamichita, bán đảo Chita, tỉnh Aichi, và hướng tới làm ra rượu mía, “rượu hòa hợp”.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Chitaichi Co., Ltd. | Từ mảnh đất này, gây dựng ngành nghề tương lai.">
+<meta property="og:description" content="Tại thị trấn Minamichita trên bán đảo Chita, chúng tôi trồng mía và hướng tới làm ra rượu mía.">
+<meta property="og:url" content="https://chitaichi.co.jp/vi/">
+<meta property="og:image" content="https://chitaichi.co.jp/assets/ogp.jpg">
+<meta property="og:locale" content="vi_VN">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../assets/logo.png" type="image/png">
+<link rel="canonical" href="https://chitaichi.co.jp/vi/">
+<link rel="alternate" hreflang="ja" href="https://chitaichi.co.jp/">
+<link rel="alternate" hreflang="en" href="https://chitaichi.co.jp/en/">
+<link rel="alternate" hreflang="zh-Hant" href="https://chitaichi.co.jp/zh-hant/">
+<link rel="alternate" hreflang="zh-Hans" href="https://chitaichi.co.jp/zh-hans/">
+<link rel="alternate" hreflang="ko" href="https://chitaichi.co.jp/ko/">
+<link rel="alternate" hreflang="pt-BR" href="https://chitaichi.co.jp/pt/">
+<link rel="alternate" hreflang="vi" href="https://chitaichi.co.jp/vi/">
+<link rel="alternate" hreflang="fil" href="https://chitaichi.co.jp/fil/">
+<link rel="alternate" hreflang="x-default" href="https://chitaichi.co.jp/">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=BIZ+UDPMincho:wght@400;700&display=swap');
+
+  :root{
+    --black:#111111;
+    --red:#a41d24;
+    --red-deep:#7c1319;
+    --white:#faf7f2;
+    --gold:#b8933f;
+    --gold-light:#d9be7f;
+    --ink:#1c1a18;
+  }
+
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+
+  body{
+    /* 読みやすさのため、UDフォント（モリサワ BIZ UDP明朝）で統一する */
+    font-family:'BIZ UDPMincho','BIZ UD明朝','Hiragino Mincho ProN',serif;
+    background:#0c0c0c;
+    color:var(--ink);
+    line-height:1.9;
+    letter-spacing:0.02em;
+  }
+
+  a{color:inherit;text-decoration:none;}
+
+  /* ===== Decorative backdrop (visible either side of the phone-width frame on wide screens) ===== */
+  .bg-decor{
+    position:fixed;inset:0;z-index:0;
+    background-color:#0c0c0c;
+    background-image:
+      radial-gradient(circle at 50% 12%, rgba(164,29,36,0.30), transparent 55%),
+      repeating-linear-gradient(45deg, rgba(184,147,63,0.045) 0 2px, transparent 2px 46px);
+    overflow:hidden;
+  }
+  .bg-decor::after{
+    content:"";
+    position:absolute;top:50%;left:50%;
+    width:min(120vw,1100px);height:min(120vw,1100px);
+    background-image:url(../assets/logo.png);
+    background-size:contain;background-repeat:no-repeat;background-position:center;
+    transform:translate(-50%,-50%);
+    opacity:0.05;
+  }
+
+  /* ===== Phone-width content frame ===== */
+  .site-frame{
+    position:relative;z-index:1;
+    max-width:640px;margin:0 auto;
+    background:var(--white);
+    box-shadow:0 0 90px rgba(0,0,0,0.55);
+    container-type:inline-size;
+    container-name:site;
+  }
+
+  .status-badge{
+    display:inline-block;
+    padding:6px 18px;
+    border:1px solid var(--gold);
+    color:var(--gold-light);
+    font-size:0.78rem;
+    letter-spacing:0.25em;
+    border-radius:2px;
+    background:rgba(0,0,0,0.25);
+  }
+
+
+  /* ===== Header ===== */
+  header{
+    position:sticky;top:0;z-index:100;
+    background:rgba(17,17,17,0.95);
+    backdrop-filter:blur(6px);
+    border-bottom:1px solid rgba(184,147,63,0.35);
+  }
+  .nav-wrap{
+    margin:0 auto;
+    display:flex;align-items:center;justify-content:space-between;
+    padding:12px 20px;
+  }
+  .brand{display:flex;align-items:center;gap:10px;color:var(--white);min-width:0;}
+  .brand img{width:32px;height:32px;object-fit:contain;flex-shrink:0;}
+  .brand-text{font-size:0.92rem;font-weight:700;letter-spacing:0.1em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+  .brand-text small{
+    display:block;font-size:0.55rem;letter-spacing:0.2em;
+    color:var(--gold-light);font-weight:400;margin-top:2px;
+  }
+
+  /* Hamburger toggle (always used — the whole site runs at a phone-width frame) */
+  .nav-toggle{
+    width:34px;height:26px;position:relative;background:none;border:none;cursor:pointer;padding:0;flex-shrink:0;
+  }
+  .nav-toggle span{
+    position:absolute;left:0;right:0;height:2px;background:var(--gold-light);
+    transition:transform .25s ease, opacity .2s ease;
+  }
+  .nav-toggle span:nth-child(1){top:2px;}
+  .nav-toggle span:nth-child(2){top:12px;}
+  .nav-toggle span:nth-child(3){top:22px;}
+  .nav-toggle.open span:nth-child(1){transform:translateY(10px) rotate(45deg);}
+  .nav-toggle.open span:nth-child(2){opacity:0;}
+  .nav-toggle.open span:nth-child(3){transform:translateY(-10px) rotate(-45deg);}
+
+  .nav-panel{
+    position:absolute;top:100%;left:0;right:0;
+    background:rgba(12,12,12,0.98);
+    border-bottom:1px solid rgba(184,147,63,0.35);
+    max-height:0;overflow:hidden;
+    transition:max-height .3s ease;
+  }
+  .nav-panel.open{max-height:900px;}
+  .nav-panel ul{list-style:none;display:flex;flex-direction:column;padding:6px 24px 18px;}
+  .nav-panel a{
+    display:block;padding:13px 0;color:var(--white);font-size:0.92rem;letter-spacing:0.08em;
+    border-bottom:1px solid rgba(250,247,242,0.08);
+  }
+  .nav-panel li:last-child a{border-bottom:none;}
+  .nav-panel a:hover{color:var(--gold-light);}
+
+  /* ===== Hero (white, logo-led) ===== */
+  .hero-white{
+    min-height:calc(100vh - 60px);
+    display:flex;flex-direction:column;align-items:center;justify-content:center;
+    text-align:center;
+    background:var(--white);
+    padding:56px 24px 80px;
+    position:relative;
+  }
+  .hero-logo{width:min(46vw,300px);height:auto;margin:0 auto 34px;display:block;}
+  .hero-white .status-badge{
+    color:var(--red-deep);border-color:var(--red-deep);background:transparent;margin-bottom:24px;
+  }
+  .hero-copy h1{
+    font-size:clamp(1.5rem, 4.2vw, 2.5rem);
+    font-weight:700;
+    color:var(--black);
+    letter-spacing:0.08em;
+    line-height:1.6;
+    margin-bottom:20px;
+  }
+  .hero-copy .terroir{
+    font-size:clamp(0.95rem, 2.2vw, 1.3rem);
+    color:var(--gold);
+    letter-spacing:0.32em;
+    font-weight:700;
+  }
+  .hero-white .divider{width:64px;height:2px;background:var(--red);margin:30px auto;}
+  .scroll-cue{
+    position:absolute;bottom:28px;left:50%;transform:translateX(-50%);
+    font-size:0.68rem;letter-spacing:0.3em;color:var(--gold);
+  }
+
+  /* ===== Section shell ===== */
+  section{padding:72px 22px;}
+  .section-inner{max-width:1000px;margin:0 auto;}
+  @container site (max-width:420px){
+    section{padding:52px 18px;}
+  }
+  .section-tag{
+    display:block;text-align:center;font-size:0.75rem;letter-spacing:0.3em;
+    color:var(--gold);margin-bottom:10px;font-weight:700;
+  }
+  h2.section-title{
+    text-align:center;font-size:clamp(1.5rem, 3.4vw, 2.1rem);font-weight:700;
+    letter-spacing:0.12em;color:var(--black);margin-bottom:16px;
+  }
+  .section-title::after{content:"";display:block;width:46px;height:2px;background:var(--red);margin:18px auto 0;}
+  .section-lead{text-align:center;max-width:680px;margin:0 auto 56px;color:#4a453f;font-size:0.98rem;}
+  .bg-black{background:var(--black);color:var(--white);}
+  .bg-black .section-title{color:var(--white);}
+  .bg-black .section-lead{color:rgba(250,247,242,0.75);}
+
+  /* ===== Area / map section ===== */
+  .map-wrap{
+    margin:0 auto 24px;max-width:460px;
+    box-shadow:0 18px 40px rgba(0,0,0,0.18);
+    background:#0d0c0b;
+  }
+  .chita-map{display:block;width:100%;height:auto;}
+  .chita-map .m-area{fill:#1a1714;stroke:#d9be7f;stroke-width:0.9;stroke-linejoin:round;}
+  .chita-map .m-hl{fill:url(#mRed);stroke:#f0d79a;stroke-width:1.1;stroke-linejoin:round;}
+  .chita-map text{font-family:inherit;text-anchor:middle;}
+  .chita-map .m-title{fill:#d9be7f;font-size:20px;letter-spacing:0.42em;font-weight:700;}
+  .chita-map .m-sub{fill:rgba(250,247,242,0.6);font-size:12px;letter-spacing:0.5em;}
+  .chita-map .m-sea{fill:rgba(217,190,127,0.5);font-size:15px;letter-spacing:0.2em;writing-mode:vertical-rl;}
+  .chita-map .m-label{fill:#d9be7f;font-size:11px;letter-spacing:0.12em;}
+  .chita-map .m-label-hl{fill:#faf7f2;font-size:13px;font-weight:700;letter-spacing:0.14em;}
+  .chita-map .m-n{fill:#d9be7f;font-size:12px;letter-spacing:0;}
+  .chita-map .m-km{fill:#d9be7f;font-size:10px;letter-spacing:0.1em;}
+  .map-legend{
+    display:flex;align-items:center;justify-content:center;gap:8px;
+    padding:12px 0 14px;font-size:0.76rem;color:rgba(250,247,242,0.75);background:#0d0c0b;
+    border-top:1px solid rgba(184,147,63,0.35);
+  }
+  .map-legend .dot-sample{
+    width:11px;height:11px;border-radius:50%;background:var(--red);box-shadow:0 0 0 2px #0d0c0b,0 0 0 3px var(--gold);
+    display:inline-block;
+  }
+  .map-caption{text-align:center;font-size:0.76rem;color:#8a8377;margin-bottom:56px;}
+  .map-caption .map-credit{font-size:0.66rem;color:#a49c8c;}
+  .map-caption a{color:var(--red);border-bottom:1px solid var(--red);}
+
+  .stat-grid{
+    display:grid;grid-template-columns:1fr;gap:18px;margin-bottom:20px;
+  }
+  @container site (min-width:480px){
+    .stat-grid{grid-template-columns:repeat(2,1fr);gap:24px;}
+  }
+  .stat-tile{
+    background:var(--black);color:var(--white);
+    padding:38px 30px;text-align:center;border-top:4px solid var(--red);
+  }
+  .stat-tile .stat-num{
+    font-size:clamp(2rem,5vw,2.8rem);font-weight:700;color:var(--gold-light);
+    letter-spacing:0.02em;margin-bottom:10px;display:block;
+  }
+  .stat-tile .stat-label{font-size:0.9rem;letter-spacing:0.05em;margin-bottom:12px;color:var(--white);}
+  .stat-tile .stat-detail{font-size:0.78rem;color:rgba(250,247,242,0.65);}
+  .source-note{text-align:center;font-size:0.7rem;color:#a49c8c;margin-top:18px;}
+
+  /* ===== Issues (3 challenges) ===== */
+  .issue-section{
+    background:linear-gradient(180deg, rgba(164,29,36,0.06), rgba(255,255,255,0) 30%), var(--white);
+    border-top:1px solid #ecdfc3;border-bottom:1px solid #ecdfc3;
+  }
+  .issue-grid{display:grid;grid-template-columns:1fr;gap:18px;margin-bottom:40px;}
+  @container site (min-width:560px){
+    .issue-grid{grid-template-columns:repeat(3,1fr);gap:24px;margin-bottom:50px;}
+  }
+  .issue-card{
+    background:var(--black);color:var(--white);padding:38px 28px;text-align:center;
+    position:relative;border-bottom:4px solid var(--red);
+  }
+  .issue-card .tag-no{font-size:0.72rem;letter-spacing:0.2em;color:var(--gold-light);margin-bottom:10px;display:block;}
+  .issue-card .en-label{
+    display:block;font-size:0.82rem;letter-spacing:0.16em;color:var(--red);
+    font-weight:700;margin-bottom:10px;text-transform:uppercase;
+  }
+  .issue-card h3{font-size:1.15rem;letter-spacing:0.06em;margin-bottom:14px;line-height:1.6;}
+  .issue-card p{font-size:0.86rem;color:rgba(250,247,242,0.78);}
+  .mission-statement{
+    text-align:center;max-width:780px;margin:0 auto;padding:38px 30px;
+    border:1px solid var(--gold);background:rgba(164,29,36,0.04);
+  }
+  .mission-statement p{font-size:1.1rem;font-weight:700;letter-spacing:0.06em;color:var(--black);}
+  .mission-statement p .accent{color:var(--red);}
+
+  /* ===== Challenge section ===== */
+  .challenge-box{
+    text-align:center;max-width:820px;margin:0 auto;
+  }
+  .challenge-box .big-line{
+    font-size:clamp(1.3rem,3.2vw,1.9rem);
+    font-weight:700;letter-spacing:0.08em;line-height:1.8;color:var(--white);
+  }
+  .challenge-box .big-line .accent{color:var(--gold-light);}
+  .challenge-box .big-line .closer{
+    display:inline-block;margin-top:14px;
+    font-size:1.1em;font-weight:700;letter-spacing:0.14em;color:var(--white);
+  }
+  .challenge-numbers{
+    display:flex;justify-content:center;gap:14px;margin:36px 0 10px;flex-wrap:wrap;
+  }
+  .challenge-numbers span{
+    border:1px solid var(--gold);color:var(--gold-light);
+    padding:8px 18px;font-size:0.78rem;letter-spacing:0.12em;
+  }
+
+  /* ===== Business content cards ===== */
+  .cards{display:grid;grid-template-columns:1fr;gap:18px;}
+  @container site (min-width:560px){
+    .cards{grid-template-columns:repeat(3,1fr);gap:24px;}
+  }
+  .card{
+    background:var(--white);border:1px solid #ecdfc3;border-top:3px solid var(--gold);
+    padding:34px 26px;text-align:center;box-shadow:0 6px 20px rgba(0,0,0,0.05);
+  }
+  .card .num{font-family:inherit;font-size:1.6rem;color:var(--red);font-weight:700;margin-bottom:14px;display:block;}
+  .card h3{font-size:1.05rem;letter-spacing:0.06em;margin-bottom:14px;color:var(--black);}
+  .card p{font-size:0.88rem;color:#4a453f;}
+
+  /* ===== Company overview table ===== */
+  .profile-table{width:100%;border-collapse:collapse;background:var(--white);box-shadow:0 8px 30px rgba(0,0,0,0.06);}
+  .profile-table tr{border-bottom:1px solid #e7e0d3;}
+  .profile-table tr:last-child{border-bottom:none;}
+  .profile-table th{
+    width:200px;text-align:left;padding:20px 26px;background:var(--red);color:var(--white);
+    font-weight:700;font-size:0.88rem;letter-spacing:0.08em;vertical-align:top;
+  }
+  .profile-table td{padding:20px 26px;font-size:0.92rem;color:var(--ink);vertical-align:top;}
+  .note-pending{
+    color:var(--red-deep);font-size:0.78rem;display:inline-block;margin-left:6px;
+    border:1px solid var(--red-deep);padding:1px 8px;border-radius:2px;
+  }
+  @container site (max-width:480px){
+    .profile-table, .profile-table tbody, .profile-table tr, .profile-table th, .profile-table td{display:block;width:100%;}
+    .profile-table th{width:auto;}
+  }
+
+  /* ===== Members (coming soon) ===== */
+  .member-section{background:var(--black);color:var(--white);text-align:center;}
+  .member-hype{
+    font-size:clamp(1.3rem,3.6vw,2rem);
+    font-weight:700;color:var(--gold-light);
+    letter-spacing:0.06em;margin-bottom:10px;
+    transform:rotate(-1.5deg);
+    display:inline-block;
+  }
+  .member-sub{font-size:0.9rem;color:rgba(250,247,242,0.7);margin-bottom:54px;}
+
+  /* ===== Contact ===== */
+  .contact-box{
+    background:var(--white);border:1px solid #ecdfc3;padding:44px;max-width:640px;margin:0 auto;
+    text-align:center;box-shadow:0 8px 30px rgba(0,0,0,0.06);
+  }
+  .contact-box p{font-size:0.92rem;color:#4a453f;margin-bottom:22px;}
+  .contact-btn{
+    display:inline-block;padding:14px 40px;background:var(--red);color:var(--white);
+    font-size:0.9rem;letter-spacing:0.15em;border:1px solid var(--red);transition:background .2s,color .2s;
+  }
+  .contact-btn:hover{background:transparent;color:var(--red);}
+  .contact-note{margin-top:20px;font-size:0.76rem;color:#8a8377;}
+
+  footer{
+    background:var(--black);color:rgba(250,247,242,0.6);text-align:center;
+    padding:36px 24px;font-size:0.76rem;letter-spacing:0.08em;
+  }
+  footer .gold-line{width:40px;height:1px;background:var(--gold);margin:0 auto 16px;}
+
+  /* ===== Hero sub copy ===== */
+  .hero-sub{font-size:clamp(0.9rem,2.2vw,1.05rem);color:#4a453f;letter-spacing:0.06em;margin-bottom:18px;}
+
+  /* ===== Value ===== */
+  .value-statement p{font-size:clamp(1.15rem,3vw,1.5rem);line-height:2;}
+
+  /* ===== Sugarcane spirits ===== */
+  .sake-section{background:linear-gradient(180deg, rgba(184,147,63,0.08), rgba(255,255,255,0) 40%), var(--white);border-top:1px solid #ecdfc3;}
+  .concept-box{background:var(--black);color:var(--white);padding:40px 26px;text-align:center;border-top:4px solid var(--red);}
+  .concept-head{font-size:clamp(1.15rem,3vw,1.45rem);font-weight:700;letter-spacing:0.06em;line-height:1.9;margin-bottom:26px;}
+  .concept-head .accent{color:var(--gold-light);}
+  .concept-head .nb{display:inline-block;}
+  .concept-list{list-style:none;display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-bottom:24px;}
+  .concept-list li{border:1px solid var(--gold);padding:6px 14px;font-size:0.82rem;letter-spacing:0.08em;}
+  .concept-list li span{color:var(--gold-light);}
+  .concept-foot{font-size:0.86rem;color:rgba(250,247,242,0.75);}
+
+  /* ===== Join ===== */
+  .join-grid{display:grid;grid-template-columns:1fr;gap:18px;max-width:480px;margin:0 auto;}
+  .join-card{border:1px solid rgba(184,147,63,0.5);padding:32px 24px;text-align:center;}
+  .join-card .num{font-family:inherit;font-size:1.4rem;color:var(--gold-light);font-weight:700;display:block;margin-bottom:10px;}
+  .join-card h3{font-size:1.05rem;letter-spacing:0.06em;margin-bottom:12px;}
+  .join-card p{font-size:0.86rem;color:rgba(250,247,242,0.75);}
+  .join-btn{display:inline-block;margin-top:18px;padding:10px 22px;background:var(--red);color:var(--white);font-size:0.82rem;letter-spacing:0.1em;border:1px solid var(--red);transition:background .2s,color .2s;}
+  .join-btn:hover{background:transparent;color:var(--gold-light);border-color:var(--gold-light);}
+
+  /* ===== News ===== */
+  .news-list{list-style:none;max-width:640px;margin:0 auto;border-top:1px solid #e7e0d3;}
+  .news-list li{display:flex;gap:20px;padding:18px 4px;border-bottom:1px solid #e7e0d3;align-items:baseline;}
+  .news-list time{font-family:inherit;color:var(--red);font-weight:700;font-size:0.88rem;letter-spacing:0.06em;flex-shrink:0;}
+  .news-list p{font-size:0.92rem;color:var(--ink);}
+
+  /* ===== Alcohol notice (footer) ===== */
+  .alcohol-note{font-size:0.72rem;line-height:1.9;color:rgba(250,247,242,0.7);margin-bottom:14px;}
+
+  /* ===== Key visual ===== */
+  .key-visual{padding:0;background:var(--black);}
+  .key-visual img{display:block;width:100%;height:auto;}
+  .kv-note{font-size:0.68rem;color:rgba(250,247,242,0.6);text-align:right;padding:8px 14px 10px;letter-spacing:0.04em;}
+
+  /* ===== History ===== */
+  .history-box{border-top:1px solid var(--gold);border-bottom:1px solid var(--gold);padding:30px 6px;margin:0 auto 48px;max-width:560px;text-align:center;}
+  .history-tag{display:block;font-size:0.7rem;letter-spacing:0.3em;color:var(--gold);margin-bottom:8px;}
+  .history-head{font-size:1.15rem;font-weight:700;letter-spacing:0.08em;color:var(--black);margin-bottom:14px;}
+  .history-box p{font-size:0.9rem;color:#4a453f;margin-bottom:10px;}
+  .history-box p:last-child{margin-bottom:0;color:var(--red-deep);font-weight:700;}
+  .issue-card .issue-source{display:block;margin-top:12px;font-size:0.66rem;color:rgba(250,247,242,0.45);}
+
+  /* ===== 合わせる酒：働く人 ===== */
+  .concept-work{margin-top:30px;padding-top:26px;border-top:1px solid rgba(184,147,63,0.45);}
+  .concept-work-head{font-size:1.05rem;font-weight:700;letter-spacing:0.05em;line-height:1.9;margin-bottom:12px;color:var(--gold-light);}
+  .concept-work-head .nb{display:inline-block;}
+  .concept-work p{font-size:0.86rem;color:rgba(250,247,242,0.78);}
+  .concept-work .concept-work-foot{margin-top:14px;font-weight:700;color:var(--white);}
+
+  /* ===== Members ===== */
+  .member-sub{font-size:0.9rem;color:rgba(250,247,242,0.7);margin-bottom:44px;}
+  .member-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:34px 18px;max-width:520px;margin:0 auto;}
+  .member-card{text-align:center;}
+  .member-plate{
+    position:relative;width:100%;aspect-ratio:1/1;margin:0 auto 16px;border-radius:50%;
+    background:radial-gradient(circle at 50% 38%, #fffdf8 0%, #f4efe4 62%, #e9dfc9 100%);
+    box-shadow:0 0 0 1px var(--gold), 0 0 0 6px rgba(17,17,17,1), 0 0 0 7px rgba(184,147,63,0.55), 0 18px 40px rgba(0,0,0,0.55);
+    overflow:hidden;
+  }
+  .member-plate img{position:absolute;inset:11%;width:78%;height:78%;object-fit:contain;}
+  .member-role{font-family:inherit;font-size:0.78rem;letter-spacing:0.32em;color:var(--gold-light);margin-bottom:4px;}
+  .member-name{font-size:1.05rem;letter-spacing:0.14em;color:var(--white);font-weight:700;}
+  .member-alias{display:block;font-size:0.78rem;letter-spacing:0.1em;font-weight:400;color:rgba(250,247,242,0.75);margin-top:2px;}
+  .member-en{font-family:inherit;font-size:0.6rem;letter-spacing:0.22em;color:rgba(250,247,242,0.5);margin-top:2px;}
+  .member-note{font-size:0.66rem;color:rgba(217,190,127,0.8);margin-top:6px;letter-spacing:0.06em;}
+
+  /* ===== Language switcher ===== */
+  .nav-wrap{gap:10px;}
+  .brand{flex:1;}
+  .lang-menu{position:relative;flex-shrink:0;}
+  .lang-menu summary{
+    list-style:none;cursor:pointer;display:flex;align-items:center;gap:6px;
+    padding:5px 10px;border:1px solid rgba(184,147,63,0.6);color:var(--gold-light);
+    font-size:0.72rem;letter-spacing:0.06em;white-space:nowrap;
+  }
+  .lang-menu summary::-webkit-details-marker{display:none;}
+  .lang-menu .lang-icon{font-size:0.7rem;opacity:0.85;}
+  .lang-menu[open] summary{background:rgba(184,147,63,0.12);}
+  .lang-menu ul{
+    position:absolute;right:0;top:calc(100% + 6px);z-index:200;list-style:none;min-width:150px;
+    background:rgba(12,12,12,0.98);border:1px solid rgba(184,147,63,0.5);padding:6px 0;
+    box-shadow:0 12px 30px rgba(0,0,0,0.5);
+  }
+  .lang-menu li a{display:block;padding:8px 16px;font-size:0.82rem;color:var(--white);letter-spacing:0.04em;}
+  .lang-menu li a:hover{color:var(--gold-light);background:rgba(184,147,63,0.08);}
+  .lang-menu li a[aria-current="page"]{color:var(--gold-light);}
+  .lang-menu li a[aria-current="page"]::before{content:"・";}
+  @container site (max-width:400px){
+    .lang-menu .lang-current{display:none;}
+  }
+  .nav-langs{padding:4px 24px 20px;border-top:1px solid rgba(184,147,63,0.25);}
+  .nav-langs-label{display:block;font-size:0.62rem;letter-spacing:0.3em;color:var(--gold);margin:12px 0 8px;}
+  .nav-langs-list{display:flex;flex-wrap:wrap;gap:8px;}
+  .nav-langs-list a{font-size:0.78rem;color:var(--white);padding:4px 10px;border:1px solid rgba(250,247,242,0.18);}
+  .nav-langs-list a[aria-current="page"]{border-color:var(--gold);color:var(--gold-light);}
+</style>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&subset=vietnamese&display=swap');
+  body{font-family:'Noto Serif','BIZ UDPMincho',serif;}
+  .chita-map .m-sea{writing-mode:horizontal-tb;letter-spacing:0.08em;font-size:13px;}
+</style>
+</head>
+<body>
+
+<div class="bg-decor" aria-hidden="true"></div>
+
+<div class="site-frame">
+
+<header>
+  <div class="nav-wrap">
+    <div class="brand">
+      <img src="../assets/logo.png" alt="Logo Chitaichi">
+      <div class="brand-text">Chitaichi Co., Ltd.<small>ĐANG THÀNH LẬP</small></div>
+    </div>
+    <details class="lang-menu" data-noi18n>
+      <summary aria-label="Language / 言語"><span class="lang-icon" aria-hidden="true">文A</span><span class="lang-current">Tiếng Việt</span></summary>
+      <ul>
+        <li><a href="/" lang="ja" hreflang="ja">日本語</a></li>
+        <li><a href="/en/" lang="en" hreflang="en">English</a></li>
+        <li><a href="/zh-hant/" lang="zh-Hant" hreflang="zh-Hant">繁體中文</a></li>
+        <li><a href="/zh-hans/" lang="zh-Hans" hreflang="zh-Hans">简体中文</a></li>
+        <li><a href="/ko/" lang="ko" hreflang="ko">한국어</a></li>
+        <li><a href="/pt/" lang="pt-BR" hreflang="pt-BR">Português</a></li>
+        <li><a href="/vi/" lang="vi" hreflang="vi" aria-current="page">Tiếng Việt</a></li>
+        <li><a href="/fil/" lang="fil" hreflang="fil">Filipino</a></li>
+      </ul>
+    </details>
+    <button class="nav-toggle" id="navToggle" aria-label="Mở menu" aria-expanded="false" onclick="toggleNav()">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <nav class="nav-panel" id="navPanel">
+    <ul>
+      <li><a href="#area" onclick="closeNav()">Bán đảo Chita</a></li>
+      <li><a href="#issue" onclick="closeNav()">Vấn đề xã hội</a></li>
+      <li><a href="#challenge" onclick="closeNav()">Thử thách</a></li>
+      <li><a href="#value" onclick="closeNav()">Điều chúng tôi trân trọng</a></li>
+      <li><a href="#sake" onclick="closeNav()">Rượu hòa hợp</a></li>
+      <li><a href="#business" onclick="closeNav()">Việc chúng tôi làm</a></li>
+      <li><a href="#join" onclick="closeNav()">Cùng tham gia</a></li>
+      <li><a href="#news" onclick="closeNav()">Tin tức</a></li>
+      <li><a href="#profile" onclick="closeNav()">Thông tin công ty</a></li>
+      <li><a href="#members" onclick="closeNav()">Thành viên</a></li>
+      <li><a href="#contact" onclick="closeNav()">Liên hệ</a></li>
+    </ul>
+    <div class="nav-langs" data-noi18n>
+      <span class="nav-langs-label">LANGUAGE</span>
+      <div class="nav-langs-list">
+          <a href="/" lang="ja" hreflang="ja">日本語</a>
+          <a href="/en/" lang="en" hreflang="en">English</a>
+          <a href="/zh-hant/" lang="zh-Hant" hreflang="zh-Hant">繁體中文</a>
+          <a href="/zh-hans/" lang="zh-Hans" hreflang="zh-Hans">简体中文</a>
+          <a href="/ko/" lang="ko" hreflang="ko">한국어</a>
+          <a href="/pt/" lang="pt-BR" hreflang="pt-BR">Português</a>
+          <a href="/vi/" lang="vi" hreflang="vi" aria-current="page">Tiếng Việt</a>
+          <a href="/fil/" lang="fil" hreflang="fil">Filipino</a>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<section class="hero-white" id="top">
+  <span class="status-badge">Đang chuẩn bị thành lập công ty</span>
+  <img class="hero-logo" src="../assets/logo.png" alt="Logo thương hiệu Chitaichi">
+  <div class="hero-copy">
+    <h1>Từ mảnh đất này,<br>gây dựng ngành nghề tương lai.</h1>
+    <p class="hero-sub">Tại thị trấn Minamichita trên bán đảo Chita, chúng tôi trồng mía<br>và hướng tới làm ra rượu mía.</p>
+    <div class="terroir">THE TERROIR OF CHITA</div>
+  </div>
+  <div class="scroll-cue">S C R O L L</div>
+</section>
+
+<section class="key-visual" aria-label="Hình ảnh chính">
+  <img src="../assets/key-visual.webp" alt="Chai rượu Chitaichi đặt bên bờ biển lúc hoàng hôn. “Từ mảnh đất này, gây dựng ngành nghề tương lai.”" loading="lazy">
+  <p class="kv-note">* Hình ảnh chỉ mang tính minh họa. Sản phẩm hiện đang được phát triển và chưa được bán.</p>
+</section>
+
+<section id="area">
+  <div class="section-inner">
+    <span class="section-tag">OUR HOME</span>
+    <h2 class="section-title">Bán đảo Chita, tỉnh Aichi</h2>
+    <p class="section-lead">
+      Bán đảo Chita thuộc tỉnh Aichi, nằm giữa vịnh Ise và vịnh Mikawa. Dù được thiên nhiên ưu đãi với khí hậu ôn hòa và địa hình phong phú,
+      nơi đây đang đối mặt với những vấn đề mang tính cấu trúc, diễn ra lặng lẽ nhưng chắc chắn.
+    </p>
+
+    <div class="map-wrap">
+      <svg class="chita-map" viewBox="0 0 600 987" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="chitaMapTitle">
+  <title id="chitaMapTitle">Bản đồ bán đảo Chita, tỉnh Aichi. Trong 5 thành phố và 5 thị trấn, thị trấn Minamichita là nơi triển khai dự án này.</title>
+  <defs>
+    <pattern id="mSea" width="10" height="10" patternUnits="userSpaceOnUse" patternTransform="rotate(-30)">
+      <line x1="0" y1="0" x2="10" y2="0" stroke="#b8933f" stroke-opacity="0.09" stroke-width="1"/>
+    </pattern>
+    <radialGradient id="mGlow" cx="50%" cy="45%" r="70%">
+      <stop offset="0" stop-color="#1d1a16"/><stop offset="1" stop-color="#0d0c0b"/>
+    </radialGradient>
+    <linearGradient id="mRed" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#c52a2f"/><stop offset="1" stop-color="#7c1319"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="987" fill="url(#mGlow)"/>
+  <rect width="600" height="987" fill="url(#mSea)"/>
+  <rect x="14" y="14" width="572" height="959" fill="none" stroke="#b8933f" stroke-opacity="0.7" stroke-width="1"/>
+  <rect x="20" y="20" width="560" height="947" fill="none" stroke="#b8933f" stroke-opacity="0.35" stroke-width="0.6"/>
+  <text class="m-title" x="300.0" y="58">CHITA PENINSULA</text>
+  <text class="m-sub" x="300.0" y="80">Tỉnh Aichi – Bán đảo Chita</text>
+  <text class="m-sea" x="58" y="513">Vịnh Ise</text>
+  <text class="m-sea" x="528" y="395">Vịnh Mikawa</text>
+  <g class="m-land"><path class="m-area" d="M259.7,248.5L257.8,245.8L257.8,245.1L262.5,242.0L264.6,238.9L263.2,237.3L260.7,239.1L260.3,238.8L258.5,239.8L259.1,240.6L254.8,243.6L254.0,243.1L254.3,240.3L253.9,239.8L253.2,240.2L251.0,237.0L247.4,236.4L244.1,233.0L234.6,228.6L234.9,228.1L233.7,227.2L235.4,224.5L235.7,224.7L236.9,222.2L235.9,220.2L207.1,215.2L206.1,212.8L210.5,205.0L209.7,204.8L218.7,189.2L219.0,189.4L220.0,187.7L221.6,184.7L222.5,181.7L231.2,166.5L231.6,166.7L233.5,163.4L235.4,162.3L261.6,162.2L262.7,161.8L262.7,162.2L265.9,162.2L266.0,155.9L263.5,155.2L253.0,155.5L252.0,155.2L249.8,152.2L260.9,117.9L261.3,116.1L257.4,113.3L267.5,113.5L269.8,111.8L279.4,111.7L284.7,110.0L288.3,110.1L294.4,111.5L298.6,111.7L304.3,110.9L309.6,125.4L312.0,123.8L311.7,121.8L315.0,120.6L315.7,122.5L316.4,122.2L315.5,119.7L318.1,118.8L318.6,120.3L320.2,120.2L322.4,118.8L323.7,121.3L322.7,121.9L323.5,123.7L320.9,124.1L318.6,125.2L319.6,127.2L321.2,127.8L322.6,127.5L322.6,130.2L323.4,130.4L324.1,129.6L324.6,130.2L326.0,128.8L325.1,131.3L327.5,134.0L328.9,136.7L328.8,137.5L330.6,140.1L329.0,143.1L331.7,143.6L332.0,144.4L333.4,145.0L333.4,145.6L328.4,146.3L329.4,146.8L329.6,149.7L331.1,150.2L331.0,151.1L329.8,151.3L329.1,152.5L329.9,155.9L331.3,158.3L334.7,161.4L338.1,162.1L337.9,163.0L336.4,163.3L334.0,165.3L332.7,168.2L333.9,169.4L331.0,173.1L329.3,178.6L325.9,185.6L328.4,188.4L329.7,190.9L333.9,194.5L335.3,194.6L336.3,196.0L336.8,198.3L335.1,200.8L335.9,203.2L334.4,203.8L335.3,205.8L337.3,208.4L344.1,211.4L343.9,212.0L344.9,213.0L347.1,213.1L348.0,214.8L346.8,217.2L342.4,219.8L342.9,220.9L338.0,223.0L325.9,217.1L323.2,222.8L321.9,222.7L321.7,221.4L321.0,221.4L317.6,223.8L319.2,225.1L317.6,227.6L314.5,226.5L311.3,223.6L310.0,223.3L309.4,225.5L310.4,225.8L310.5,227.0L313.5,231.5L313.7,233.3L312.0,237.5L312.9,239.4L312.0,241.5L312.5,242.6L311.5,244.8L311.8,247.2L311.0,249.7L310.6,256.1L311.1,258.4L311.1,266.0L312.5,271.0L312.0,272.8L307.2,279.8L308.3,281.6L311.5,281.8L313.8,280.7L315.6,284.9L318.3,286.9L319.8,289.1L320.7,290.9L320.6,292.2L315.6,293.6L313.5,295.6L311.2,296.0L309.0,297.4L306.8,299.8L305.9,300.0L306.2,301.5L305.5,302.5L306.2,304.5L305.0,304.5L304.2,303.4L302.6,297.1L299.4,292.2L298.6,292.3L297.5,291.2L295.9,287.7L292.5,288.7L292.3,288.2L295.3,285.5L294.4,283.3L291.7,283.9L290.5,282.8L288.9,282.5L287.4,279.9L286.7,279.7L284.2,280.1L284.1,280.8L282.9,281.0L282.4,281.9L281.4,281.0L279.3,281.7L280.0,279.8L279.5,278.9L277.8,278.8L278.1,278.0L277.5,276.6L278.3,275.9L276.2,268.4L273.3,268.6L273.0,266.5L271.2,266.7L271.0,265.3L273.9,264.8L272.1,251.2L266.9,251.9L266.2,248.8L264.8,247.2L265.6,246.4L264.5,245.3L265.1,244.7L264.5,243.8L259.7,248.5Z"/><path class="m-area" d="M323.3,290.3L321.2,292.4L320.6,292.2L320.7,290.9L319.8,289.1L318.3,286.9L315.6,284.9L313.8,280.7L311.5,281.8L308.3,281.6L307.2,279.8L312.0,272.8L312.5,271.0L311.1,266.0L311.1,258.4L310.6,256.1L311.0,249.7L311.8,247.2L311.5,244.8L312.5,242.6L312.0,241.5L312.9,239.4L312.0,237.5L313.7,233.3L313.5,231.5L310.5,227.0L310.4,225.8L309.4,225.5L310.0,223.3L311.3,223.6L314.5,226.5L317.6,227.6L319.2,225.1L317.6,223.8L321.0,221.4L321.7,221.4L321.9,222.7L323.2,222.8L325.9,217.1L338.0,223.0L342.9,220.9L342.4,219.8L346.8,217.2L348.0,214.8L347.1,213.1L344.9,213.0L343.9,212.0L344.1,211.4L337.3,208.4L335.3,205.8L334.4,203.8L335.9,203.2L335.1,200.8L336.8,198.3L336.3,196.0L335.3,194.6L333.9,194.5L329.7,190.9L328.4,188.4L325.9,185.6L329.3,178.6L331.0,173.1L333.9,169.4L332.7,168.2L333.8,165.6L336.4,163.3L337.9,163.0L338.1,162.3L334.9,161.5L330.9,157.8L329.0,153.2L329.6,151.4L331.0,151.1L331.1,150.1L329.6,149.7L329.4,146.8L328.5,146.1L333.4,145.6L333.7,147.4L335.2,147.1L336.7,147.7L335.8,149.6L336.5,149.8L337.1,149.6L338.0,147.6L339.2,147.5L338.8,145.7L340.9,143.8L340.8,142.9L342.0,140.8L343.1,140.5L343.0,141.2L343.7,141.5L344.2,140.4L345.9,140.9L346.4,140.6L349.2,142.8L349.4,144.6L350.6,147.2L350.5,149.0L352.6,151.1L353.4,154.7L357.4,158.3L360.8,158.4L368.6,157.3L368.6,155.5L369.8,155.3L372.5,152.3L372.6,151.2L373.4,151.7L373.7,151.3L377.8,154.4L377.8,156.0L377.1,156.4L379.5,160.5L381.2,161.5L380.9,162.8L381.8,164.0L382.2,164.8L381.8,165.5L379.0,166.8L378.2,167.9L379.2,168.1L380.6,167.1L382.5,167.5L387.5,160.8L395.8,161.2L396.5,162.3L397.5,160.7L399.2,160.6L400.1,156.2L402.6,152.2L401.9,149.0L405.6,151.3L408.5,154.7L412.2,155.7L415.2,159.0L416.9,158.3L417.8,158.4L418.9,161.2L421.8,162.5L426.4,163.5L425.0,167.0L425.2,167.8L423.6,170.6L427.4,173.3L428.5,173.4L430.3,174.7L430.3,173.1L428.9,171.4L430.2,171.0L431.0,169.6L433.3,169.8L437.2,168.0L439.1,168.7L439.5,169.5L438.5,172.6L440.5,173.7L440.5,176.1L442.3,176.1L442.4,182.8L443.1,182.8L443.1,187.0L445.7,187.2L445.3,190.5L446.5,192.0L440.4,198.7L437.1,199.8L431.0,199.9L428.6,201.5L426.7,207.4L423.8,212.4L424.3,215.9L427.0,221.2L426.6,223.8L424.9,227.3L421.4,231.2L414.3,236.5L413.5,238.6L413.4,242.0L404.3,241.8L403.4,242.4L402.0,245.0L399.9,244.8L399.8,246.0L388.2,241.3L385.5,239.1L382.5,238.1L377.6,241.3L377.6,243.4L372.6,246.9L368.9,250.7L368.0,252.5L363.5,249.1L365.4,245.4L364.9,244.5L363.5,247.2L361.2,249.5L359.1,255.0L357.5,256.4L357.5,257.0L359.4,257.9L357.4,260.9L353.7,261.2L352.8,263.9L349.1,263.0L347.0,263.1L346.6,266.6L343.2,265.2L341.7,265.2L340.9,265.8L341.1,268.3L338.9,271.4L336.4,270.7L335.4,271.3L336.6,274.7L336.1,276.1L332.7,277.5L329.6,277.7L329.3,279.2L324.2,287.3L324.0,289.6L323.3,290.3Z"/><path class="m-area" d="M143.9,336.0L140.2,333.5L152.6,314.8L158.8,318.8L157.3,321.0L161.5,323.9L163.2,321.8L163.9,322.3L161.4,330.5L159.6,336.6L156.0,339.2L154.6,341.2L155.9,342.1L155.1,343.3L143.9,336.0ZM157.6,320.8L157.8,320.8L157.6,320.8ZM157.8,321.2L157.9,321.0L157.8,321.2ZM169.5,368.4L168.6,367.3L168.8,364.6L162.4,363.6L163.0,363.5L163.8,362.1L163.8,359.5L165.4,353.1L165.4,350.3L164.9,349.8L165.2,349.2L164.8,348.6L165.3,348.2L165.2,345.1L164.7,344.7L165.0,344.2L164.5,344.2L165.0,344.2L165.0,342.3L164.6,342.2L165.3,341.6L164.8,339.4L165.3,338.9L164.4,337.1L165.5,336.5L166.2,334.1L165.5,333.0L166.4,332.7L167.2,331.1L167.0,330.1L168.7,325.2L168.4,321.6L168.9,320.6L154.9,310.7L155.6,310.8L172.5,286.6L180.6,291.2L184.7,284.0L177.0,279.6L180.3,273.8L179.6,272.9L180.4,271.5L181.4,271.8L181.7,271.4L163.3,256.9L181.8,271.3L182.2,270.5L183.2,271.0L196.8,247.0L205.3,248.4L210.2,239.8L209.8,238.6L193.0,235.7L196.4,229.2L199.3,229.7L199.7,227.0L201.9,223.6L202.3,224.2L225.4,228.2L225.6,227.1L228.4,227.6L228.6,229.7L226.7,232.9L230.4,235.7L234.6,228.6L244.1,233.0L247.4,236.4L251.0,237.0L253.2,240.2L253.9,239.8L254.3,240.3L254.0,243.1L254.8,243.6L259.1,240.6L258.5,239.8L260.3,238.8L260.7,239.1L263.2,237.3L264.6,238.9L262.5,242.0L257.8,245.1L257.8,245.8L259.7,248.5L264.5,243.8L265.1,244.7L264.5,245.3L265.6,246.4L264.8,247.2L266.2,248.8L266.9,251.9L272.1,251.2L273.9,264.8L271.0,265.3L271.2,266.7L273.0,266.5L273.3,268.6L276.1,268.2L278.3,275.9L277.5,276.6L278.1,278.0L277.8,278.8L279.8,279.3L279.5,281.9L281.3,281.0L281.8,281.4L282.4,281.9L282.9,281.0L284.1,280.8L284.2,280.1L286.7,279.7L287.4,279.9L288.9,282.5L290.5,282.8L291.7,283.9L294.4,283.3L294.9,283.8L295.3,285.5L292.3,288.2L292.5,288.7L295.9,287.7L297.8,291.6L298.6,292.3L299.4,292.2L302.6,297.1L304.8,304.4L307.1,304.8L309.8,307.5L309.5,310.0L310.4,311.1L310.0,312.7L310.7,313.9L311.0,316.9L311.9,315.9L312.9,315.8L313.3,316.4L312.0,317.9L307.2,318.8L306.7,321.5L305.1,322.4L303.2,324.5L301.4,328.0L300.7,330.7L297.9,330.7L296.3,331.7L296.5,333.4L300.1,333.3L301.5,333.9L301.6,334.5L300.8,334.3L299.9,336.4L296.0,337.6L294.3,337.7L293.6,338.2L292.4,338.1L291.1,336.3L288.0,333.8L284.2,333.5L282.8,332.8L281.8,331.6L281.8,328.9L281.3,328.4L280.2,328.2L279.8,329.3L275.9,330.8L275.8,328.6L274.5,327.4L274.1,325.0L271.7,327.5L269.5,328.4L266.0,332.7L264.6,332.6L261.5,331.1L259.8,329.6L258.3,331.4L258.5,331.9L257.0,334.6L256.2,335.4L254.6,335.8L254.7,336.5L252.8,338.1L250.9,336.8L250.7,335.8L249.5,336.0L249.7,337.3L246.9,337.9L247.2,339.4L248.7,339.2L249.0,341.2L250.7,342.7L250.3,344.5L249.7,344.5L250.8,346.4L251.5,346.4L251.1,351.5L252.2,353.4L252.1,357.7L250.0,358.2L246.8,357.4L245.2,358.9L242.1,357.7L237.3,358.3L234.9,360.1L228.3,360.3L225.7,359.3L224.7,360.5L224.4,363.0L222.8,364.1L222.3,365.2L216.6,366.9L216.9,367.5L216.2,367.8L213.1,374.5L210.9,377.5L207.1,378.0L205.0,379.0L200.3,375.7L198.6,377.9L198.1,377.8L191.8,372.9L192.2,372.4L187.0,370.5L182.8,370.0L178.2,367.3L173.8,367.6L169.9,369.1L169.5,368.4Z"/><path class="m-area" d="M396.5,245.0L399.8,246.0L399.9,244.8L402.0,245.0L403.4,242.4L404.3,241.8L413.4,242.0L414.5,246.7L413.9,261.8L412.6,268.2L410.7,271.9L409.8,278.5L410.3,282.2L415.6,299.4L416.7,316.1L416.2,323.0L416.9,331.5L413.4,329.4L412.5,335.3L410.9,339.2L411.8,341.0L408.4,355.4L407.8,355.7L405.6,354.8L404.0,353.4L403.0,353.9L405.7,355.5L405.6,358.9L406.0,358.5L407.7,358.8L406.2,365.2L405.2,365.9L404.0,377.7L388.3,376.2L390.3,371.7L389.7,371.3L390.2,369.3L384.2,364.5L380.3,362.3L377.9,362.7L377.7,364.3L376.3,366.4L371.3,365.8L369.7,366.2L367.2,364.7L365.4,364.5L363.7,361.0L361.0,359.5L359.1,359.1L357.5,359.7L357.1,359.3L354.3,359.0L353.6,355.1L351.7,354.0L351.1,351.4L347.7,350.0L348.4,346.2L346.5,345.6L346.4,342.9L341.8,342.3L342.5,340.4L342.9,339.7L342.4,339.2L340.0,341.5L336.1,338.2L332.6,336.4L332.3,335.4L330.5,333.7L327.7,334.0L326.1,333.1L325.4,332.1L325.8,330.6L323.0,326.4L322.2,327.0L317.2,324.6L315.1,320.1L312.0,318.6L312.2,317.5L313.3,316.6L313.1,316.0L311.9,315.9L311.0,316.9L310.7,313.9L310.0,312.7L310.4,311.1L309.5,310.0L309.8,307.5L307.1,304.8L306.0,304.3L305.5,302.5L306.2,301.5L305.9,300.0L306.8,299.8L309.0,297.4L311.2,296.0L313.5,295.6L315.6,293.6L319.6,292.3L321.3,292.3L324.0,289.6L324.2,287.3L329.3,279.2L329.6,277.7L334.2,277.1L336.4,275.7L336.5,274.3L335.4,271.3L336.4,270.7L338.9,271.4L341.1,268.3L340.9,265.8L341.7,265.2L343.2,265.2L346.6,266.6L347.0,263.1L349.1,263.0L352.8,263.9L353.7,261.2L357.4,260.9L359.4,257.9L357.5,257.0L357.5,256.4L359.1,255.0L361.2,249.5L363.5,247.2L364.9,244.5L365.4,245.4L363.5,249.1L368.0,252.5L368.9,250.7L372.6,246.9L377.6,243.4L377.6,241.3L382.5,238.1L385.5,239.1L388.2,241.3L396.5,245.0ZM407.7,358.6L407.9,357.9L407.7,358.6Z"/><path class="m-area" d="M337.8,408.1L337.7,409.3L336.3,410.6L336.4,411.2L341.0,413.7L344.7,417.5L342.5,420.3L335.6,414.7L330.9,419.2L328.8,419.6L326.7,417.5L327.1,415.1L326.1,414.3L323.3,413.8L321.8,414.5L319.5,416.8L314.6,414.9L311.0,416.0L307.8,420.1L305.3,419.6L304.9,418.5L302.2,417.3L301.7,418.2L300.5,417.8L298.7,416.1L293.8,415.7L291.3,414.0L289.1,414.2L285.2,413.1L281.3,413.2L277.9,415.7L278.6,417.3L277.3,418.1L276.5,416.8L273.3,419.1L265.4,418.4L262.7,419.5L260.8,417.1L258.2,415.9L250.7,405.3L256.9,400.6L258.1,395.8L262.2,384.4L266.6,373.7L268.2,370.6L270.2,368.4L270.3,367.2L269.3,366.8L270.2,363.8L269.8,362.4L266.6,362.3L264.1,361.4L264.0,360.1L261.8,360.2L257.6,359.0L255.5,359.6L252.1,357.7L252.2,353.4L251.1,351.5L251.5,346.4L250.8,346.4L249.7,344.5L250.3,344.5L250.7,342.7L249.0,341.2L248.7,339.2L247.2,339.4L246.9,337.9L249.7,337.3L249.5,336.0L250.7,335.8L250.9,336.8L252.8,338.1L254.7,336.5L254.6,335.8L256.2,335.4L257.0,334.6L258.5,331.9L258.3,331.4L259.8,329.6L261.5,331.1L264.6,332.6L266.0,332.7L269.5,328.4L271.7,327.5L274.1,325.1L274.2,326.7L275.4,328.3L275.9,330.8L279.8,329.3L280.2,328.2L281.6,328.5L281.8,331.6L282.8,332.8L284.2,333.5L288.0,333.8L292.6,338.2L299.2,336.7L300.4,336.0L300.8,334.3L301.6,334.5L301.5,334.0L300.1,333.3L296.5,333.4L296.3,331.7L297.9,330.7L300.7,330.7L301.4,328.0L303.2,324.5L305.1,322.4L306.7,321.5L307.2,318.8L312.0,317.9L312.1,318.8L314.5,319.6L315.6,320.8L317.3,324.7L322.2,327.0L323.0,326.4L325.8,330.6L325.4,332.1L326.1,333.1L327.7,334.0L330.5,333.7L332.3,335.4L332.6,336.4L335.8,338.0L340.1,341.5L342.4,339.2L342.9,339.7L341.8,342.3L346.4,342.9L346.5,345.6L348.4,346.2L347.7,350.0L351.1,351.4L351.7,354.0L353.6,355.1L354.3,359.0L349.3,364.5L348.9,367.9L346.3,367.8L345.0,369.6L345.1,376.8L343.0,377.5L342.7,378.6L341.1,380.2L340.3,385.2L340.8,386.7L343.2,388.5L340.4,392.3L337.3,395.2L336.8,400.0L338.8,403.1L337.8,408.1Z"/><path class="m-area" d="M240.0,608.8L238.5,608.6L236.2,611.3L233.2,610.1L232.2,611.7L230.4,611.8L227.9,610.1L227.1,608.7L224.1,608.4L223.5,609.2L221.9,609.0L222.3,606.6L221.4,606.3L222.3,606.5L222.9,603.6L222.2,603.2L223.1,603.2L223.7,601.0L223.6,600.2L222.9,600.0L223.6,599.5L223.6,595.7L224.5,595.9L225.7,593.5L225.4,592.7L226.1,592.8L226.8,590.2L226.4,589.3L227.1,589.0L227.8,585.2L227.3,583.4L225.2,583.3L224.6,580.9L225.3,583.2L226.5,583.4L227.1,579.0L228.3,578.9L227.8,576.7L226.8,576.7L225.4,577.5L223.8,580.7L225.2,577.4L227.3,576.4L227.4,574.8L227.9,574.9L227.3,574.6L228.2,573.1L229.4,559.9L228.6,558.1L227.0,558.9L225.9,557.3L227.1,558.6L228.2,558.1L226.3,554.9L225.4,555.5L225.3,557.1L225.3,555.5L226.3,554.4L225.9,554.6L226.3,554.3L225.7,553.1L225.0,553.4L225.4,555.0L224.7,553.4L225.3,553.1L224.4,550.7L224.8,547.2L222.0,540.0L221.4,539.8L221.1,537.4L219.6,535.3L217.6,535.7L218.3,535.6L218.2,534.1L217.6,533.2L216.5,533.1L217.7,532.8L215.0,532.7L211.9,530.2L215.1,532.6L216.4,532.7L216.2,531.8L215.7,531.9L215.5,530.1L214.5,530.2L215.1,530.0L214.8,527.5L213.6,527.8L213.9,530.0L213.5,530.2L213.3,527.6L214.7,527.4L213.2,526.9L213.9,526.7L214.8,524.1L215.0,521.7L214.6,520.6L215.0,520.5L214.4,520.7L215.0,520.5L215.1,519.2L214.2,514.0L212.9,511.5L212.5,511.6L212.2,509.9L210.8,508.7L211.2,508.3L210.6,508.6L210.3,507.3L206.2,504.7L205.0,503.2L204.6,503.7L204.6,502.9L203.9,504.1L204.5,502.9L201.9,499.1L201.4,499.4L201.0,498.6L200.6,499.0L199.4,498.2L199.0,498.7L197.5,497.9L197.0,498.7L193.1,497.5L196.1,498.0L196.3,497.3L195.5,496.6L193.4,496.4L195.5,496.4L194.2,495.5L194.3,494.9L192.8,495.3L193.1,495.9L192.6,496.8L192.5,495.4L189.7,492.8L182.3,488.0L183.7,484.7L180.9,483.0L183.8,484.5L184.4,483.3L184.1,484.3L187.7,486.1L188.3,485.7L188.0,484.5L187.2,484.6L188.5,484.1L188.2,483.2L187.3,483.6L188.1,483.0L187.5,481.6L185.8,482.6L186.0,483.3L184.7,481.0L186.9,479.8L186.3,478.7L185.7,479.0L184.2,476.2L184.5,475.5L183.4,476.1L184.5,475.5L183.7,474.0L183.5,471.3L181.8,471.4L180.0,476.9L178.8,477.1L179.5,481.9L174.0,493.5L171.4,495.8L173.9,493.4L175.2,490.8L170.5,486.8L167.0,489.2L168.2,490.8L168.9,490.3L168.2,490.9L170.2,493.8L171.4,493.4L170.1,493.9L163.9,484.9L158.4,474.2L157.2,471.2L158.1,472.8L157.9,471.6L158.8,469.8L158.1,464.0L156.2,467.5L155.9,466.9L157.6,463.8L158.8,463.1L158.7,462.1L160.9,458.9L163.8,455.7L165.7,454.3L164.1,452.8L162.4,453.9L164.1,452.7L163.9,451.4L163.7,450.5L162.0,450.7L162.2,448.5L161.2,448.2L162.0,447.9L161.8,446.1L161.3,446.0L161.6,445.6L160.5,445.9L160.8,443.8L159.4,441.4L159.7,441.1L158.2,436.8L158.2,433.0L157.0,431.9L157.6,432.5L158.7,432.1L158.9,435.2L159.8,435.4L160.3,433.9L161.6,434.5L162.3,432.6L161.5,431.9L160.9,433.6L160.3,433.4L160.8,432.0L160.4,430.5L158.8,430.5L158.6,431.3L158.1,430.0L157.1,430.0L156.5,431.6L155.7,431.8L156.3,431.5L156.6,430.0L157.6,429.9L157.7,429.0L156.8,428.8L157.4,428.7L157.4,425.2L156.5,424.7L155.8,426.8L156.0,430.1L155.5,430.3L155.5,426.1L156.0,424.0L157.4,423.8L157.7,423.2L158.7,419.8L158.9,418.1L158.2,417.8L158.7,417.7L158.9,416.2L156.8,415.8L157.0,410.5L157.4,410.5L157.0,415.7L158.0,415.9L157.9,411.0L158.9,410.8L159.4,406.3L158.5,406.0L157.3,407.2L157.8,407.7L157.1,407.1L156.1,410.5L157.1,407.1L158.3,405.8L158.9,406.0L159.8,404.1L160.6,396.9L160.4,395.4L159.9,395.3L160.4,395.2L160.1,394.4L160.9,394.3L160.1,394.4L160.5,394.2L160.7,392.6L160.6,391.8L159.8,391.7L160.6,391.7L160.1,391.3L160.8,391.1L160.3,390.6L160.9,390.3L160.6,388.3L161.4,388.2L160.7,388.2L161.3,387.5L161.6,381.4L161.0,378.2L159.1,378.0L158.4,377.0L159.2,377.9L160.0,377.9L159.3,375.4L158.9,375.0L158.2,375.6L157.9,376.9L159.9,372.4L159.3,372.1L158.5,374.3L157.2,375.2L158.5,373.8L159.5,369.5L160.4,368.0L159.7,367.7L160.4,368.0L161.5,365.4L161.1,364.9L161.7,365.4L162.2,365.1L162.7,363.7L168.8,364.6L168.6,367.3L169.2,367.5L169.9,369.1L173.8,367.6L178.2,367.3L182.8,370.0L187.0,370.5L192.2,372.4L191.8,372.9L198.1,377.8L198.6,377.9L200.3,375.7L205.0,379.0L207.1,378.0L210.9,377.5L213.1,374.5L216.2,367.8L216.9,367.5L216.6,366.9L222.3,365.2L222.8,364.1L224.4,363.0L224.7,360.5L226.0,359.2L228.3,360.3L234.9,360.1L237.3,358.3L242.1,357.7L245.2,358.9L246.8,357.4L250.0,358.2L251.5,357.6L255.5,359.6L257.6,359.0L261.8,360.2L264.0,360.1L264.1,361.4L266.1,362.2L269.8,362.4L270.2,363.8L269.3,366.8L270.3,367.2L270.2,368.4L268.2,370.6L266.6,373.7L262.2,384.4L258.1,395.8L256.9,400.6L250.7,405.3L249.5,403.6L250.1,405.9L249.7,406.9L248.4,407.6L248.9,408.7L244.5,411.5L243.1,413.4L240.5,415.0L240.3,416.8L239.1,417.6L238.3,417.3L236.2,420.1L234.1,421.5L233.7,423.2L234.1,425.1L233.2,427.1L234.0,429.1L233.4,430.3L231.8,431.5L231.4,434.5L229.7,435.6L227.9,440.1L230.1,441.4L232.1,441.6L232.7,442.6L232.5,443.8L235.2,444.9L235.8,446.4L237.2,446.5L240.0,445.5L241.6,446.0L242.1,445.4L243.0,445.5L244.6,446.2L246.1,447.9L246.5,451.1L245.7,454.5L246.5,464.4L245.0,466.2L242.8,473.5L243.4,475.6L244.4,477.1L244.8,481.6L244.0,482.4L244.5,487.6L246.0,490.4L247.6,490.7L248.1,492.1L249.9,494.3L252.2,494.5L250.8,495.7L253.3,503.0L254.9,503.0L256.2,505.0L258.1,505.9L261.0,506.1L265.2,510.4L264.0,511.6L264.1,513.0L266.3,516.5L267.9,521.4L268.5,526.1L269.0,526.2L269.4,527.7L269.2,530.8L270.8,530.6L270.9,531.3L266.7,532.5L264.0,534.8L259.8,535.8L257.1,535.8L254.1,537.2L255.4,546.3L256.2,546.3L256.2,546.7L255.5,546.9L255.6,547.6L258.3,557.6L258.8,563.1L257.6,565.6L259.6,570.7L258.5,572.6L258.9,574.7L258.0,579.2L258.5,582.4L255.9,583.8L255.9,585.0L254.9,587.1L255.4,589.2L255.1,590.3L258.7,596.1L257.3,598.3L257.4,599.2L258.7,600.4L259.6,602.2L260.1,605.3L261.2,605.8L263.0,608.5L263.2,611.0L261.4,612.5L256.9,610.2L252.7,612.3L251.8,611.6L248.9,611.5L244.0,608.5L240.0,608.8ZM122.5,496.7L121.0,493.3L120.0,488.4L120.3,486.9L122.1,485.4L128.7,484.1L132.3,484.7L140.9,489.9L145.1,493.2L152.8,502.6L157.9,512.2L159.1,516.4L158.8,515.5L153.1,516.6L154.1,521.8L160.2,520.7L161.5,535.6L161.6,541.3L142.8,545.0L145.3,557.9L136.6,559.6L134.4,558.8L133.6,557.6L132.7,552.7L132.9,546.7L128.5,524.3L126.9,523.2L127.9,521.1L123.4,498.7L122.5,496.7ZM156.3,440.2L157.7,440.4L156.3,440.2ZM158.5,377.9L157.7,377.5L158.5,377.9Z"/><path class="m-area" d="M238.3,417.3L239.1,417.6L240.3,416.8L240.7,414.8L243.1,413.4L244.5,411.5L248.9,408.7L248.4,407.6L249.7,406.9L250.1,405.9L249.5,403.6L258.2,415.9L260.8,417.1L262.7,419.5L265.4,418.4L273.3,419.1L276.5,416.8L277.3,418.1L278.6,417.3L277.9,415.7L282.4,412.9L289.1,414.2L291.3,414.0L293.8,415.7L298.7,416.1L300.5,417.8L301.7,418.2L302.2,417.3L304.9,418.5L305.3,419.6L307.4,420.1L308.4,419.7L310.6,416.3L314.5,414.9L319.3,416.8L322.3,414.1L326.1,414.3L327.1,415.1L326.7,416.7L327.0,418.1L329.0,419.6L330.9,419.2L335.6,414.7L342.5,420.3L344.7,417.5L341.0,413.7L336.2,410.9L337.8,409.1L338.8,403.1L336.7,399.5L337.3,395.2L340.4,392.3L343.2,388.5L340.8,386.7L340.2,384.4L341.2,379.9L342.7,378.6L343.0,377.5L345.1,376.8L344.9,369.8L345.8,368.3L346.3,367.8L348.9,367.9L349.3,364.5L354.3,359.0L357.1,359.3L357.5,359.7L359.1,359.1L361.0,359.5L363.7,361.0L365.4,364.5L367.2,364.7L369.7,366.2L371.3,365.8L376.3,366.4L377.7,364.3L377.9,362.7L380.3,362.3L384.2,364.5L390.2,369.3L389.7,371.3L390.3,371.7L388.3,376.2L404.0,377.7L400.8,406.6L400.4,406.1L399.3,406.6L398.7,407.7L399.0,408.3L397.3,407.6L393.0,412.0L399.1,417.1L398.9,417.4L399.7,417.6L398.4,424.1L397.3,425.0L394.5,438.4L393.4,440.7L388.1,453.5L379.8,469.1L377.7,471.8L375.0,477.7L379.9,480.2L386.3,486.7L384.0,491.4L379.2,489.2L377.6,497.4L374.4,495.8L376.1,487.5L366.4,482.7L365.8,484.0L354.1,478.2L347.3,485.2L341.7,483.4L340.7,484.3L338.2,490.5L343.2,492.6L348.6,487.1L357.1,491.3L356.7,500.7L348.6,513.6L325.9,504.0L323.6,503.6L321.2,499.4L320.5,499.1L315.1,502.0L307.6,502.3L307.6,500.0L306.7,500.0L306.8,501.3L305.0,501.4L304.5,500.0L301.7,500.0L301.8,498.6L301.3,498.4L290.9,497.8L290.8,497.2L289.1,496.8L288.9,496.3L279.3,492.8L277.6,490.9L274.5,489.6L260.3,491.9L260.3,492.7L257.8,492.6L257.7,491.7L255.6,491.6L252.7,486.6L251.2,485.5L251.0,486.1L250.4,485.9L249.0,483.9L247.5,483.3L244.1,483.2L244.1,482.1L244.8,481.6L244.4,477.1L243.4,475.6L242.8,473.5L245.0,466.2L246.5,464.4L245.7,454.5L246.5,451.1L246.1,447.9L244.6,446.2L243.0,445.5L242.1,445.4L241.6,446.0L240.0,445.5L237.2,446.5L235.8,446.4L235.2,444.9L232.5,443.8L232.7,442.6L232.1,441.6L230.1,441.4L227.9,440.1L229.7,435.6L231.4,434.5L231.8,431.5L233.4,430.3L234.0,429.1L233.2,427.1L234.1,425.1L233.7,423.2L234.0,421.7L236.2,420.1L238.3,417.3Z"/><path class="m-area" d="M320.5,580.6L320.3,582.2L320.5,580.6ZM321.2,580.0L321.0,578.6L321.2,580.0ZM340.6,571.3L340.0,577.7L321.5,578.5L321.4,579.0L321.0,574.0L320.1,574.0L319.8,574.8L320.2,575.0L319.2,575.8L318.8,577.5L319.5,577.8L318.7,577.9L319.5,578.2L319.1,578.1L318.5,580.6L318.6,582.3L320.4,582.3L320.7,582.9L320.9,582.4L326.4,582.5L324.9,593.2L325.1,595.0L344.3,595.4L325.4,595.1L324.8,597.7L325.8,597.9L324.8,598.0L323.9,609.1L319.0,609.5L317.7,610.8L312.1,610.3L311.5,611.2L309.7,611.8L309.4,612.7L308.4,612.9L308.6,613.7L306.3,614.9L305.1,613.9L303.3,614.0L302.6,613.2L301.4,610.9L303.4,612.2L304.5,611.7L304.1,610.4L303.0,610.2L302.8,608.6L302.0,607.8L300.1,608.2L297.9,609.9L296.3,609.2L296.0,608.3L294.6,609.2L292.8,607.6L289.3,607.5L286.2,609.2L281.5,610.1L279.1,609.8L276.0,608.3L275.1,606.1L274.1,606.1L272.8,605.1L271.0,605.9L265.7,606.1L263.7,607.4L262.1,607.2L261.2,605.8L260.1,605.3L259.6,602.2L258.7,600.4L257.4,599.2L257.3,598.3L258.8,596.3L255.1,590.3L255.4,589.2L254.9,587.1L255.9,585.0L255.9,583.8L258.5,582.4L258.0,579.2L258.9,574.7L258.5,572.6L259.6,570.7L257.6,565.6L258.8,563.1L258.3,557.6L255.6,547.6L255.5,546.9L256.2,546.7L256.2,546.3L255.4,546.3L254.1,537.2L257.1,535.8L259.8,535.8L264.0,534.8L266.7,532.5L270.9,531.3L270.8,530.6L269.2,530.8L269.4,527.7L269.0,526.2L268.5,526.1L267.9,521.4L266.3,516.5L264.1,513.0L264.0,511.6L265.2,510.4L261.6,506.6L258.1,505.9L256.2,505.0L254.9,503.0L253.3,502.9L250.8,495.7L252.2,494.5L249.9,494.3L248.1,492.1L247.6,490.7L246.0,490.4L244.5,487.6L244.1,483.2L247.2,483.3L249.2,484.0L250.4,485.9L251.0,486.1L251.2,485.5L252.7,486.6L255.1,491.1L255.8,491.8L257.7,491.7L257.8,492.6L260.3,492.7L260.3,491.9L274.5,489.6L277.6,490.9L279.3,492.8L288.9,496.3L289.1,496.8L290.8,497.2L290.9,497.8L301.3,498.4L301.8,498.6L301.7,500.0L304.5,500.0L305.0,501.4L306.8,501.3L306.7,500.0L307.6,500.0L307.6,502.3L315.1,502.0L320.5,499.1L321.2,499.4L323.6,503.6L325.9,504.0L348.6,513.6L347.0,516.2L341.7,514.0L341.6,514.3L328.5,508.2L327.7,509.4L328.4,515.4L328.0,515.7L328.3,521.9L329.4,522.3L331.0,521.1L340.1,524.7L339.9,525.2L342.0,526.7L341.9,530.7L340.1,530.7L339.5,531.6L339.2,541.6L332.1,541.6L331.1,542.2L331.1,544.8L330.7,534.2L328.7,532.6L326.0,533.0L326.6,535.2L329.6,534.9L325.3,535.8L325.5,539.3L326.7,539.2L327.0,546.3L332.4,546.5L332.5,552.8L331.9,552.9L332.0,554.7L330.4,560.0L341.0,566.4L340.6,571.3Z"/><path class="m-area" d="M216.2,740.5L214.3,741.6L210.9,737.7L209.6,737.9L207.2,737.0L205.8,737.2L203.6,736.1L204.6,735.7L203.8,733.6L200.4,727.3L197.5,723.2L195.3,722.4L195.6,722.2L194.7,721.4L194.6,720.3L193.5,719.2L193.8,718.6L193.2,716.4L192.2,715.5L192.8,714.0L191.6,713.1L191.3,711.5L190.0,710.0L190.5,707.4L187.2,707.2L187.2,702.9L188.2,702.0L187.3,702.9L187.4,705.8L189.5,705.5L189.5,704.5L191.4,704.4L191.5,703.5L192.4,703.4L191.5,702.7L188.9,702.7L192.0,702.9L193.4,700.2L192.8,699.9L193.6,700.1L193.8,699.0L193.1,698.8L194.0,698.9L194.2,697.9L193.6,697.6L194.3,697.7L194.6,696.6L194.1,696.3L194.8,696.6L195.0,695.8L194.5,695.1L195.2,695.3L195.4,694.3L194.8,694.0L195.6,694.2L197.4,688.1L197.9,688.0L197.3,687.2L197.9,687.3L198.4,686.0L204.9,669.0L205.4,666.0L206.8,663.0L206.2,662.5L207.4,662.5L205.9,661.9L207.6,662.1L209.1,657.8L208.7,657.4L209.2,657.3L210.4,653.3L211.6,651.9L211.7,650.2L212.4,649.4L212.1,648.8L212.7,649.0L213.0,647.6L212.5,647.3L212.9,647.5L213.2,646.4L212.7,646.1L213.2,646.2L213.6,645.1L213.0,644.6L213.6,644.7L214.2,641.5L214.8,641.2L215.0,640.3L214.5,640.2L215.0,640.2L215.4,639.1L215.0,638.8L215.6,639.1L215.8,638.4L215.5,637.7L216.0,637.6L216.6,634.4L216.1,634.3L216.6,634.4L216.7,633.3L216.3,632.8L216.8,632.9L217.0,631.8L216.7,629.6L214.4,629.2L215.9,625.5L215.5,624.7L216.2,624.8L216.3,624.3L215.7,624.1L216.4,624.2L216.8,622.7L216.4,622.2L217.0,621.4L217.4,621.6L220.3,613.7L220.4,612.8L219.9,612.5L220.6,612.8L221.9,609.0L223.5,609.2L224.1,608.4L227.1,608.7L227.9,610.1L230.4,611.8L232.2,611.7L233.2,610.1L236.2,611.3L238.8,608.5L240.7,609.0L243.8,608.5L248.9,611.5L251.8,611.6L252.4,612.1L255.0,611.5L256.9,610.2L261.6,612.5L263.2,611.0L263.1,608.8L262.1,607.2L263.7,607.4L265.7,606.1L271.0,605.9L272.8,605.1L274.1,606.1L275.1,606.1L275.6,608.1L278.6,609.7L281.1,610.1L286.2,609.2L289.3,607.5L292.8,607.6L294.6,609.2L296.0,608.3L296.3,609.2L297.9,609.9L300.1,608.2L302.0,607.8L302.8,608.6L303.0,610.2L304.1,610.4L304.5,611.7L303.4,612.2L301.4,610.9L302.6,613.2L303.3,614.0L305.1,613.9L306.3,614.9L308.6,613.7L308.4,612.9L309.4,612.7L309.7,611.8L311.5,611.2L312.1,610.3L317.4,610.6L315.3,615.0L317.0,618.7L317.6,621.9L317.2,624.7L318.1,625.2L317.8,627.9L318.7,628.0L317.8,628.1L318.1,628.6L319.6,628.7L318.9,628.8L317.6,630.7L317.9,630.9L316.3,633.4L316.7,633.6L313.8,640.2L316.8,644.1L317.1,646.9L316.9,649.3L316.4,649.6L317.6,649.7L317.0,650.0L315.2,653.5L308.9,669.8L307.5,679.2L310.4,679.7L307.5,679.3L307.5,680.0L308.6,680.8L311.3,681.2L309.2,680.9L308.6,683.8L310.4,684.1L312.1,682.4L310.5,684.3L308.1,684.2L306.5,689.3L306.5,693.3L307.1,693.7L306.7,694.4L308.2,696.7L309.9,697.3L311.1,699.3L311.5,699.0L312.4,701.1L314.6,703.6L318.3,705.4L319.3,702.4L318.6,704.8L320.7,705.2L320.7,706.2L321.7,706.1L322.1,704.0L319.7,701.2L322.2,704.0L321.9,705.8L323.6,706.3L324.6,706.0L325.2,706.7L326.6,706.8L326.6,708.5L327.1,709.1L327.3,716.7L326.8,718.2L327.2,720.5L331.3,723.6L339.5,727.0L340.5,729.4L341.4,729.3L340.9,729.6L341.3,730.0L341.8,729.7L341.0,730.2L341.3,731.0L342.2,731.0L342.4,730.1L341.8,731.8L343.3,734.3L346.9,735.9L347.4,735.7L350.9,739.5L348.4,740.6L344.2,743.6L343.2,743.1L341.9,743.7L338.5,746.7L338.4,749.6L339.8,751.0L334.2,757.2L334.5,757.7L333.5,758.7L332.3,758.6L331.9,759.4L330.7,758.9L330.1,762.8L328.5,764.4L328.7,765.9L327.3,766.0L327.1,767.8L326.0,768.4L324.9,770.3L324.0,769.9L323.1,770.8L323.0,771.9L321.9,773.3L322.9,774.9L319.7,776.3L320.5,779.2L315.0,780.4L314.4,780.3L312.9,778.0L313.2,775.3L312.1,774.0L313.1,771.9L312.8,769.8L313.8,768.3L313.7,767.0L312.0,765.2L308.9,765.2L307.5,764.1L306.0,760.9L302.6,758.8L300.1,760.1L299.3,758.0L299.7,756.0L298.3,752.7L293.4,746.8L291.4,747.2L289.8,739.2L287.3,737.7L288.3,734.0L286.8,732.1L286.2,728.6L285.0,727.1L281.5,725.2L282.4,722.0L281.7,719.8L282.8,716.3L280.4,712.3L280.7,709.4L280.5,708.3L279.7,707.7L275.3,707.4L273.4,706.2L269.9,706.2L267.4,705.5L265.2,704.0L263.9,702.3L262.7,702.7L260.4,706.4L257.2,706.9L257.1,709.1L254.5,710.8L253.4,712.6L250.7,713.3L246.6,712.9L246.1,715.8L243.7,719.1L244.4,720.7L244.1,722.4L237.6,720.4L236.9,721.1L236.9,722.4L235.2,722.7L234.0,724.3L232.7,723.5L230.2,722.9L228.4,722.8L227.1,723.3L225.9,726.6L226.5,728.2L226.0,730.3L224.7,730.0L223.4,730.8L221.7,734.2L219.9,733.8L219.6,735.2L220.4,737.9L217.4,737.8L216.2,740.5Z"/><path class="m-hl" d="M454.9,914.3L454.3,913.7L455.9,911.4L458.0,911.6L457.5,912.1L458.0,913.6L458.6,914.5L458.4,915.7L456.5,917.3L455.2,915.9L454.9,914.3ZM455.8,916.6L455.9,917.2L455.8,916.6ZM455.5,917.0L455.3,916.4L455.5,917.0ZM454.5,914.2L454.4,914.2L454.5,914.2ZM454.6,914.8L454.5,914.7L454.6,914.8ZM454.6,914.9L454.6,915.0L454.6,914.9ZM454.5,914.9L454.4,915.0L454.5,914.9ZM455.1,915.1L455.0,915.1L455.1,915.1ZM455.1,915.2L454.9,915.2L455.1,915.2ZM455.8,917.1L455.7,917.4L455.8,917.1ZM455.2,917.1L455.1,917.2L455.2,917.1ZM455.0,916.6L454.7,916.8L455.0,916.6ZM454.8,916.6L454.5,916.5L454.8,916.6ZM454.8,916.3L454.6,916.3L454.8,916.3ZM455.3,916.2L455.2,916.4L455.3,916.2ZM455.5,916.3L455.4,916.3L455.5,916.3ZM455.3,915.6L455.3,915.7L455.3,915.6ZM456.1,910.5L456.0,911.0L456.1,910.5ZM455.1,911.4L455.3,911.9L455.1,911.4ZM452.6,908.6L452.8,909.0L452.3,909.3L452.6,908.6ZM453.8,909.9L453.8,910.5L453.0,910.4L453.1,909.9L453.8,909.9ZM452.4,897.7L452.6,897.7L452.4,897.7ZM452.2,897.8L452.3,897.9L452.2,897.8ZM451.9,898.2L451.8,898.3L451.9,898.2ZM451.6,898.4L451.6,898.6L451.6,898.4ZM451.2,898.2L451.2,898.3L451.2,898.2ZM451.0,898.1L451.1,898.2L451.0,898.1ZM451.0,897.8L451.0,897.8L451.0,897.8ZM450.9,897.9L450.9,898.0L450.9,897.9ZM450.9,897.9L450.7,897.8L450.9,897.9ZM451.8,908.3L451.7,908.4L451.8,908.3ZM452.6,908.3L452.5,908.4L452.6,908.3ZM452.7,908.5L452.8,908.6L452.7,908.5ZM451.6,909.3L451.7,909.5L451.6,909.3ZM454.0,909.8L454.0,909.9L454.0,909.8ZM453.1,910.6L453.0,910.7L453.1,910.6ZM454.9,910.3L454.8,910.3L454.9,910.3ZM454.8,910.3L454.8,910.4L454.8,910.3ZM454.9,910.3L455.0,910.5L454.9,910.3ZM455.5,910.0L455.4,910.1L455.5,910.0ZM455.4,910.0L455.4,910.0L455.4,910.0ZM455.5,909.9L455.5,910.0L455.5,909.9ZM455.5,909.9L455.3,909.9L455.5,909.9ZM455.3,909.9L455.2,909.9L455.3,909.9ZM455.7,909.9L455.5,910.0L455.7,909.9ZM455.8,910.0L455.8,910.1L455.8,910.0ZM455.8,910.1L455.7,910.2L455.8,910.1ZM455.9,910.2L455.9,910.2L455.9,910.2ZM455.8,910.3L455.6,910.7L455.8,910.3ZM455.9,910.4L455.9,910.5L455.9,910.4ZM456.0,910.3L455.9,910.3L456.0,910.3ZM456.0,910.3L456.0,910.3L456.0,910.3ZM455.9,910.2L456.0,910.1L455.9,910.2ZM456.0,910.2L456.1,910.2L456.0,910.2ZM456.1,910.3L456.1,910.3L456.1,910.3ZM456.1,910.3L456.0,910.4L456.1,910.3ZM458.9,914.0L459.3,914.1L458.9,914.2L458.9,914.0ZM459.1,914.2L459.2,914.3L459.1,914.2ZM458.6,915.3L458.6,915.5L458.6,915.3ZM457.9,911.2L458.0,911.2L457.9,911.2ZM457.9,911.4L457.9,911.5L457.9,911.4ZM458.1,912.0L458.0,912.1L458.1,912.0ZM457.7,912.6L457.7,912.7L457.7,912.6ZM457.7,913.1L457.7,913.2L457.7,913.1ZM452.6,897.6L451.4,898.4L450.9,897.3L449.2,898.0L448.8,896.7L447.7,897.2L447.1,896.9L446.9,895.6L448.4,895.1L448.5,894.2L448.3,893.4L447.3,892.9L447.4,890.8L447.0,890.3L445.1,889.7L444.3,890.5L443.1,889.9L441.8,890.7L440.8,890.3L440.5,889.1L442.1,885.9L443.6,885.1L442.7,882.1L442.8,879.9L443.4,883.9L444.9,883.9L445.0,880.0L443.6,880.1L445.4,878.5L444.2,877.2L444.0,875.9L442.9,875.2L444.0,874.6L444.4,875.1L445.3,873.6L446.4,873.9L446.6,873.3L447.2,875.7L449.0,875.4L447.6,874.1L449.0,874.7L449.4,875.4L451.0,875.5L450.8,874.3L451.6,874.1L451.8,875.1L454.0,874.6L455.0,873.7L453.4,871.8L453.4,867.5L452.4,866.6L450.9,866.5L452.4,866.5L453.0,865.9L453.8,866.6L455.3,866.1L456.4,860.5L457.2,860.0L457.5,862.4L461.0,864.0L460.3,865.3L460.8,867.5L460.7,869.1L460.1,869.0L460.1,876.8L458.3,877.9L456.9,877.4L454.4,879.1L451.6,883.7L451.3,886.9L453.7,888.8L452.8,889.3L452.1,890.8L453.4,891.6L453.4,893.2L454.3,893.3L454.0,894.0L453.8,893.7L453.0,894.5L453.8,895.7L453.1,896.6L453.5,897.4L452.6,897.6ZM435.9,897.6L435.8,897.6L435.9,897.6ZM435.7,897.6L435.7,897.7L435.7,897.6ZM435.7,897.8L435.7,897.8L435.7,897.8ZM435.6,897.8L435.6,897.9L435.6,897.8ZM435.3,897.7L435.3,897.8L435.3,897.7ZM435.3,897.7L435.2,897.7L435.3,897.7ZM435.2,897.7L435.1,897.7L435.2,897.7ZM436.3,897.6L435.0,897.8L434.8,897.2L436.6,896.1L437.1,895.2L437.5,896.5L436.3,897.6ZM216.2,753.7L214.8,755.0L215.5,757.1L214.7,755.0L216.2,753.7ZM216.2,758.1L215.3,758.0L216.2,758.1ZM216.2,748.4L216.5,747.7L216.2,748.4ZM216.2,747.5L216.2,747.4L216.2,747.5ZM216.0,747.3L215.7,747.2L216.0,747.3ZM216.8,748.3L216.7,748.3L216.8,748.3ZM243.0,775.4L242.6,776.3L242.0,774.9L240.4,774.9L241.0,773.6L240.7,772.3L239.0,772.1L237.2,773.0L237.4,772.1L236.8,771.1L237.4,771.3L237.2,770.6L235.1,767.5L233.1,766.5L233.9,766.0L230.7,767.4L234.0,765.8L235.0,765.9L235.5,765.2L234.8,764.5L231.1,766.3L233.2,765.4L232.4,765.7L232.5,763.4L231.8,762.0L228.7,759.1L223.6,757.6L221.9,758.0L222.0,758.9L221.7,757.8L219.2,758.3L217.5,757.0L218.5,757.7L220.2,756.4L219.5,755.1L218.2,756.3L220.3,754.3L219.1,753.1L218.5,753.4L218.4,754.3L218.0,754.2L217.6,753.3L218.0,752.3L216.9,752.6L217.2,751.8L216.7,751.7L216.4,749.7L217.5,749.6L217.3,748.7L213.5,743.4L206.9,739.1L207.4,738.6L205.8,737.2L207.2,737.0L209.6,737.9L210.9,737.7L214.0,741.4L215.2,741.4L216.6,740.2L217.4,737.8L220.4,737.9L219.6,735.2L219.9,733.8L221.7,734.2L223.4,730.8L224.7,730.0L226.0,730.3L226.5,728.2L225.9,726.6L227.1,723.3L228.4,722.8L230.2,722.9L232.7,723.5L234.0,724.3L235.2,722.7L236.9,722.4L236.9,721.1L237.6,720.4L244.1,722.4L244.4,720.7L243.7,719.1L246.1,715.8L246.6,712.9L250.7,713.3L253.4,712.6L254.5,710.8L257.1,709.1L257.2,706.9L260.4,706.4L261.5,705.2L262.5,702.8L263.8,702.3L267.4,705.5L269.9,706.2L273.1,706.1L275.0,707.3L279.7,707.7L280.5,708.3L280.4,712.3L282.8,716.3L281.7,719.8L282.4,722.0L281.5,725.2L285.0,727.1L286.2,728.6L286.8,732.1L288.3,734.0L287.3,737.7L289.8,739.2L291.4,747.2L293.4,746.8L298.3,752.7L299.7,756.0L299.3,758.0L300.1,760.1L302.6,758.8L306.0,760.9L307.5,764.1L308.9,765.2L312.0,765.2L313.7,767.0L313.8,768.3L312.8,769.8L313.1,771.9L312.1,774.0L313.2,775.3L312.8,777.7L314.4,780.3L320.5,779.2L319.7,776.3L322.9,774.9L321.9,773.3L323.0,771.9L323.1,770.8L324.0,769.9L324.9,770.3L326.0,768.4L327.1,767.8L327.3,766.0L328.7,765.9L328.5,764.4L330.1,762.8L330.7,758.9L331.9,759.4L332.3,758.6L333.5,758.7L334.5,757.7L334.2,757.2L339.8,751.0L338.4,749.6L338.4,747.0L339.1,746.1L341.9,743.7L343.2,743.1L344.2,743.6L348.4,740.6L351.9,738.9L352.4,742.8L353.9,744.4L353.7,745.0L357.7,749.6L358.6,750.1L359.0,749.8L358.3,750.5L359.0,750.2L360.8,752.3L361.9,751.7L360.8,752.3L361.4,752.6L362.0,751.9L362.5,752.2L361.6,752.7L362.4,754.0L363.1,753.5L363.0,752.3L362.7,754.0L363.6,756.3L363.3,755.2L366.4,757.7L374.4,758.4L380.1,760.6L379.7,760.9L380.6,761.6L386.6,765.3L390.2,769.5L392.2,779.5L393.3,781.2L395.4,782.8L395.7,783.7L392.7,786.1L391.3,788.5L390.4,787.1L389.1,786.9L388.9,788.6L388.8,787.1L385.8,787.4L384.7,789.4L385.1,789.7L387.0,790.4L387.8,788.7L386.5,791.9L386.9,794.2L386.1,794.5L385.6,791.9L384.5,792.0L384.2,791.1L382.7,790.8L382.8,791.6L384.7,795.6L387.0,797.4L388.7,796.9L390.9,795.1L390.5,795.7L392.5,795.4L393.2,793.6L393.4,794.7L394.8,796.1L394.6,797.5L395.4,798.5L396.2,799.4L397.4,799.5L399.2,798.1L400.0,798.1L400.5,798.7L400.1,799.9L400.4,800.5L399.7,801.2L398.3,805.6L395.4,807.0L397.3,807.8L396.6,809.4L397.0,810.4L396.8,808.8L394.5,808.0L393.6,810.0L394.3,808.0L393.3,807.6L392.4,808.8L392.7,809.7L392.0,809.9L392.0,813.4L395.3,812.2L396.0,810.9L395.4,812.2L396.7,814.6L397.5,814.9L400.2,820.3L401.8,819.5L400.2,820.3L400.3,821.7L399.7,822.1L400.9,823.1L401.7,822.4L401.0,821.1L401.4,821.6L402.3,820.6L401.9,821.6L402.2,822.3L403.8,822.0L403.9,820.7L402.5,818.3L403.7,820.6L405.7,820.3L407.4,824.8L408.2,828.9L407.7,829.0L407.4,825.3L405.4,825.6L405.9,828.8L406.4,828.8L405.0,829.0L404.9,829.6L403.9,826.8L402.4,826.7L401.7,827.9L401.2,827.5L400.8,828.3L401.5,828.6L401.7,828.2L402.4,830.3L401.8,830.6L401.9,833.5L401.0,833.5L399.9,834.7L400.9,833.4L399.9,831.9L398.5,832.7L397.7,834.8L397.6,833.6L396.8,833.4L396.4,834.6L396.9,834.8L396.7,836.2L398.6,836.1L399.2,835.1L399.7,835.0L398.7,835.7L398.8,836.6L399.7,836.5L399.7,837.3L401.4,838.5L401.2,839.2L403.5,836.8L401.1,839.8L400.6,839.7L399.7,840.6L399.1,841.5L399.7,842.0L399.2,842.7L398.9,841.6L398.5,842.1L397.7,840.8L398.0,839.9L397.1,839.3L397.4,838.5L394.3,835.9L392.4,833.2L392.2,831.9L389.4,830.9L388.5,832.2L388.6,830.6L386.9,830.0L380.7,829.4L377.3,831.6L375.3,831.6L372.2,833.0L366.3,832.0L361.8,832.2L360.8,833.2L361.2,831.9L360.4,831.1L359.8,831.5L360.0,830.7L356.4,830.4L356.3,829.6L356.6,830.2L357.8,830.4L357.9,828.5L356.6,828.4L356.3,829.3L356.3,828.2L356.0,830.5L356.3,830.8L355.7,830.4L355.0,831.2L354.4,830.8L353.1,831.6L350.7,829.8L349.3,827.7L347.3,827.0L347.5,826.1L346.1,824.9L347.7,822.7L346.7,824.6L348.2,825.4L349.8,822.8L347.7,820.5L347.2,821.0L348.2,822.0L347.8,822.4L345.9,820.1L344.1,821.8L345.2,823.3L344.0,821.9L342.2,821.6L342.6,819.0L340.5,816.3L338.3,817.5L338.2,816.8L337.1,817.9L337.8,819.1L340.0,817.9L337.8,819.2L338.1,819.8L337.8,819.3L336.7,819.6L336.2,822.0L339.4,820.4L338.0,821.5L339.0,822.7L337.7,822.5L336.4,823.7L338.0,825.5L340.6,823.8L339.6,823.2L342.0,824.5L340.8,823.9L338.1,825.6L337.8,827.4L336.9,827.9L331.1,826.3L331.9,823.4L330.9,823.4L332.0,823.0L330.8,821.6L329.8,821.6L329.6,820.9L328.2,820.5L328.0,819.9L323.1,818.7L320.6,817.5L319.6,819.0L318.0,818.7L313.9,816.4L319.4,818.7L320.5,817.2L318.1,815.6L317.5,815.6L317.1,816.6L316.1,816.3L315.4,815.7L315.7,814.9L313.1,813.7L312.6,814.6L313.2,816.3L312.3,814.4L313.0,812.7L308.8,810.1L308.1,810.9L308.7,809.9L308.0,809.2L306.9,808.9L306.7,809.2L301.7,807.3L300.8,807.6L300.5,807.0L301.1,806.2L300.0,804.4L294.4,801.3L289.8,801.4L289.4,799.9L287.8,798.8L286.8,799.7L285.0,800.1L284.9,799.4L286.3,798.5L286.1,798.0L284.5,798.6L285.1,798.2L284.7,797.1L282.1,795.8L279.2,794.5L276.4,794.1L274.3,792.6L272.3,794.3L273.3,793.0L272.9,792.7L271.8,794.2L270.7,794.3L271.7,794.1L272.6,793.0L270.5,792.3L270.2,793.6L270.3,792.2L269.8,791.8L268.0,791.4L266.7,792.0L265.6,791.4L264.9,791.8L264.5,789.8L262.9,788.3L261.5,787.9L260.7,788.8L260.1,788.6L260.0,787.1L257.6,783.7L254.5,781.8L254.8,781.1L253.9,780.3L253.6,780.6L253.6,779.8L251.0,778.3L250.3,778.5L249.7,777.7L247.0,776.7L245.8,775.6L244.5,775.9L244.5,775.3L243.0,775.4ZM269.8,794.5L270.1,795.1L270.6,795.3L269.8,794.5ZM288.8,801.3L289.8,801.6L290.3,802.4L289.1,802.3L288.8,801.3ZM313.3,817.1L313.4,817.1L313.3,817.1ZM322.1,819.2L322.2,819.7L322.1,819.2ZM325.1,819.7L325.8,820.1L325.0,820.4L324.4,819.9L325.1,819.7ZM324.0,821.3L324.6,821.6L324.2,822.1L323.6,821.8L324.0,821.3ZM344.0,825.4L342.4,826.2L344.0,825.4ZM343.6,824.8L343.7,824.7L346.1,825.4L343.6,824.8ZM362.5,751.6L363.0,751.7L362.5,751.6ZM371.9,833.1L371.9,833.4L371.9,833.1ZM389.6,794.6L389.7,795.6L389.6,794.6ZM402.5,833.3L402.5,831.5L404.4,830.5L402.6,831.7L402.5,833.2L403.2,835.7L402.5,833.3ZM400.0,845.7L400.5,846.3L400.0,845.7ZM400.1,842.4L401.0,843.8L400.6,843.9L400.1,842.4ZM399.8,842.5L399.9,842.4L399.8,842.5ZM400.1,843.0L400.2,843.1L400.1,843.0ZM400.3,843.5L400.4,843.4L400.3,843.5ZM397.7,810.4L397.2,811.8L397.7,810.4ZM391.6,787.7L391.9,787.8L391.6,787.7ZM392.1,786.9L392.3,786.8L392.1,786.9ZM397.8,795.1L397.9,795.2L397.8,795.1ZM396.0,794.9L396.3,795.5L394.9,796.0L395.2,794.9L396.0,794.9ZM407.1,833.1L407.3,833.3L407.1,833.1ZM407.1,832.4L407.3,832.6L407.1,832.4ZM407.7,832.8L407.8,832.8L407.7,832.8ZM407.6,832.3L407.5,832.5L407.6,832.3ZM408.7,830.0L405.4,831.2L408.7,830.0ZM404.9,831.0L404.1,830.8L405.0,830.9L404.9,831.0ZM429.6,890.6L429.6,890.7L429.6,890.6ZM429.5,890.7L429.4,891.4L428.5,891.2L428.8,890.4L429.5,890.7ZM428.8,891.6L428.8,891.7L428.8,891.6ZM428.4,891.4L428.3,891.4L428.4,891.4ZM428.3,891.2L428.2,891.1L428.3,891.2ZM428.0,891.3L427.9,891.3L428.0,891.3ZM428.0,890.9L427.9,891.0L428.0,890.9ZM428.2,890.6L428.1,890.7L428.2,890.6ZM430.1,833.6L429.9,834.4L429.7,834.0L430.1,833.6ZM429.0,835.0L428.9,835.2L429.0,835.0ZM423.9,822.8L423.8,822.8L423.9,822.8ZM425.3,823.3L425.2,823.3L425.3,823.3ZM425.4,823.1L425.4,823.3L425.4,823.1ZM424.3,822.9L423.9,823.4L424.3,822.9ZM440.9,887.6L441.0,887.6L440.9,887.6ZM441.9,886.2L441.8,886.2L441.9,886.2ZM441.4,886.3L440.6,885.7L441.2,885.4L442.0,885.8L441.4,886.3ZM443.3,884.3L443.2,884.3L443.3,884.3ZM440.4,888.8L440.3,888.8L440.4,888.8ZM431.9,890.2L431.8,890.2L431.9,890.2ZM432.0,890.2L432.1,890.6L432.0,890.2ZM431.7,890.4L431.6,890.8L431.7,890.4ZM431.6,890.8L431.5,890.8L431.6,890.8ZM431.5,890.8L431.4,890.9L431.5,890.8ZM437.6,896.5L437.7,896.6L437.6,896.5ZM437.5,896.7L437.4,896.7L437.5,896.7ZM436.8,897.3L436.8,897.4L436.8,897.3ZM436.9,897.4L436.9,897.4L436.9,897.4ZM436.6,897.3L436.6,897.4L436.6,897.3ZM435.9,897.4L435.9,897.5L435.9,897.4ZM435.9,897.5L435.8,897.5L435.9,897.5ZM435.1,896.7L435.0,896.7L435.1,896.7ZM438.2,872.6L438.1,872.8L438.2,872.6ZM441.8,873.6L441.7,875.0L441.8,873.6ZM441.8,868.9L442.1,867.6L441.8,868.9ZM432.5,826.2L433.1,824.9L433.7,825.4L433.3,826.4L432.5,826.2ZM443.8,876.3L443.8,876.0L443.8,876.3ZM443.8,868.2L444.9,865.3L450.8,862.0L450.7,860.7L450.8,862.1L445.0,865.3L443.8,868.2ZM443.8,872.2L443.7,873.0L442.9,873.4L441.5,873.4L440.3,872.6L440.7,872.1L440.2,870.6L440.6,869.8L442.1,868.9L442.9,869.2L444.7,871.2L443.8,872.2ZM443.8,817.4L442.5,818.6L443.6,820.7L444.5,820.5L440.1,821.1L440.2,822.0L440.6,822.6L446.5,822.1L446.0,819.0L445.2,818.9L446.0,818.9L446.9,817.8L446.7,817.2L447.2,817.0L447.4,817.5L449.3,816.6L449.7,817.7L452.0,817.5L453.5,818.9L454.0,818.5L453.6,817.0L452.2,817.1L452.6,816.3L454.6,815.9L453.4,814.6L450.0,816.0L448.7,814.5L446.9,815.4L445.3,815.4L449.0,814.3L450.3,815.6L455.8,813.6L456.7,816.2L459.2,816.1L465.3,818.4L466.0,819.6L464.8,819.7L463.1,820.8L462.2,822.2L462.3,822.9L463.0,823.0L462.2,822.6L461.1,823.1L461.1,823.6L462.0,822.8L462.1,823.2L461.1,824.4L461.1,823.7L460.6,824.0L461.5,825.3L461.2,827.2L461.4,825.3L460.9,824.6L460.1,825.3L459.7,824.7L458.9,825.4L459.9,826.8L460.4,826.9L459.4,827.0L458.4,825.7L456.9,826.7L455.4,826.5L449.7,829.0L445.9,829.5L442.1,831.4L440.2,829.6L437.7,829.6L437.6,826.7L437.8,829.1L438.9,829.1L439.5,825.6L437.6,826.0L439.5,825.5L439.0,823.4L437.4,822.4L437.3,823.0L437.3,822.5L443.8,817.4ZM443.8,814.4L442.0,816.1L440.2,816.8L442.0,816.0L443.8,814.4ZM454.5,893.1L454.8,893.3L454.5,893.7L454.5,893.1ZM447.8,893.2L447.8,893.3L447.8,893.2ZM447.4,893.0L447.5,893.2L447.4,893.0ZM453.1,889.2L453.1,889.3L453.1,889.2ZM453.2,889.4L453.3,889.6L453.2,889.4ZM453.0,889.4L452.9,889.6L453.0,889.4ZM446.7,895.8L446.6,895.9L446.7,895.8ZM446.5,895.8L446.4,895.8L446.5,895.8ZM446.2,896.0L446.2,896.0L446.2,896.0ZM446.5,896.2L446.4,896.2L446.5,896.2ZM446.4,896.3L446.3,896.4L446.4,896.3ZM446.8,896.1L446.7,896.1L446.8,896.1ZM453.0,871.5L450.1,871.7L447.4,872.8L447.4,870.5L446.7,870.5L446.7,868.2L446.7,866.5L450.3,866.1L449.5,866.6L449.5,870.0L453.0,870.0L453.0,871.5ZM452.5,862.3L452.1,862.3L452.5,862.3ZM454.5,849.4L454.7,848.0L455.7,846.7L457.3,847.0L457.6,848.2L457.1,849.4L454.5,849.4ZM447.2,829.8L447.4,829.8L447.2,829.8ZM460.3,874.8L460.3,874.9L460.3,874.8ZM461.1,868.6L461.0,868.8L461.1,868.6ZM460.7,867.0L460.7,867.1L460.7,867.0ZM460.8,867.2L460.8,867.3L460.8,867.2ZM459.6,877.3L459.7,877.3L459.6,877.3ZM459.5,877.3L459.5,877.4L459.5,877.3ZM459.3,877.6L459.2,877.7L459.3,877.6ZM459.3,877.7L459.2,877.8L459.3,877.7ZM459.3,877.8L459.3,877.9L459.3,877.8ZM460.3,876.2L460.3,876.2L460.3,876.2ZM460.3,876.2L460.2,876.3L460.3,876.2ZM460.6,876.1L460.4,876.4L460.6,876.1ZM457.4,859.3L457.6,859.7L457.4,859.3ZM461.1,864.2L461.0,864.3L461.1,864.2ZM461.3,828.0L461.8,828.1L461.3,828.1L459.6,828.1L461.3,828.0ZM480.0,807.3L479.2,807.9L478.8,807.5L479.5,807.0L480.0,807.3Z"/></g>
+  <g><text class="m-label" x="281" y="198">Tokai</text><text class="m-label" x="371" y="208">Obu</text><text class="m-label" x="227" y="303">Chita</text><text class="m-label" x="378" y="306">Higashiura</text><text class="m-label" x="301" y="374">Agui</text><text class="m-label" x="212" y="461">Tokoname</text><text class="m-label" x="325" y="442">Handa</text><text class="m-label" x="297" y="552">Taketoyo</text><text class="m-label" x="265" y="674">Mihama</text><text class="m-label-hl" x="320" y="760">Minamichita</text></g>
+  <g class="m-pin" transform="translate(320,780)">
+    <circle r="16" fill="#faf7f2" fill-opacity="0.12"/><circle r="9" fill="#faf7f2" fill-opacity="0.22"/>
+    <circle r="4.5" fill="#faf7f2" stroke="#b8933f" stroke-width="1.2"/>
+  </g>
+  <g transform="translate(530,869)" class="m-compass">
+    <circle r="22" fill="none" stroke="#b8933f" stroke-opacity="0.6" stroke-width="0.8"/>
+    <path d="M0,-30 L5,0 L0,6 L-5,0 Z" fill="#d9be7f"/><path d="M0,30 L5,0 L0,-6 L-5,0 Z" fill="#b8933f" fill-opacity="0.35"/>
+    <text class="m-n" x="0" y="-36">N</text>
+  </g>
+  <g transform="translate(46,935)" class="m-scale">
+    <line x1="0" y1="0" x2="175.9" y2="0" stroke="#d9be7f" stroke-width="1.2"/>
+    <line x1="0" y1="-4" x2="0" y2="4" stroke="#d9be7f"/><line x1="175.9" y1="-4" x2="175.9" y2="4" stroke="#d9be7f"/>
+    <text class="m-km" x="87.9" y="-8">10 km</text>
+  </g>
+</svg>
+      <div class="map-legend"><span class="dot-sample"></span>Thị trấn Minamichita (nơi triển khai dự án)</div>
+    </div>
+    <p class="map-caption">
+      Bán đảo Chita, tỉnh Aichi | 5 thành phố và 5 thị trấn (Tokai, Obu, Chita, Tokoname, Handa / Higashiura, Agui, Taketoyo, Mihama, Minamichita)<br>
+      <span class="map-credit">Nguồn: Bộ Đất đai, Hạ tầng, Giao thông và Du lịch Nhật Bản, “Thông tin số quốc gia về đất đai (dữ liệu khu vực hành chính)”, đã được chỉnh sửa</span>
+    </p>
+
+    <div class="history-box">
+      <span class="history-tag">HISTORY</span>
+      <p class="history-head">Bán đảo Chita – từng là vùng đất của rượu.</p>
+      <p>Vào thời Edo, bán đảo Chita có hơn hai trăm xưởng rượu. Rượu ủ trên bán đảo được chất lên thuyền buôn và chở tới thành Edo. Nghề nấu rượu ấy đến nay vẫn được các xưởng rượu trên bán đảo gìn giữ.</p>
+      <p>Cho vùng đất rượu này, thêm một giọt mới. Thứ chúng tôi chọn là cây mía.</p>
+    </div>
+
+    <div class="stat-grid">
+      <div class="stat-tile">
+        <span class="stat-num">-67.9%</span>
+        <div class="stat-label">Thị trấn Minamichita: tỷ lệ suy giảm dân số nữ trẻ (ước tính 2020→2050)</div>
+        <div class="stat-detail">Năm 2020: 1.291 người → ước tính năm 2050: 414 người. Trong “Báo cáo phân tích ‘tính bền vững’ của chính quyền địa phương năm 2024” (2024) của Hội đồng Chiến lược Dân số, thị trấn Minamichita được xếp vào nhóm “chính quyền địa phương có nguy cơ biến mất”.</div>
+      </div>
+      <div class="stat-tile">
+        <span class="stat-num">Khoảng 1.128 ha</span>
+        <div class="stat-label">Diện tích đất nông nghiệp bị bỏ hoang tại khu vực Chita (bao gồm thị trấn Minamichita)</div>
+        <div class="stat-detail">Tăng từ khoảng 865 ha năm tài chính 2013 lên khoảng 1.128 ha năm tài chính 2016 (theo tài liệu công bố của Văn phòng Nông Lâm Thủy sản Chita, tỉnh Aichi). Do thiếu người canh tác, diện tích đất nông nghiệp không được sử dụng đang dần mở rộng.</div>
+      </div>
+    </div>
+    <p class="source-note">* Số liệu thống kê dựa trên tài liệu công bố của từng nguồn. Số liệu có thể được cập nhật theo các tài liệu công bố sau này.<br>* Số lượng xưởng rượu dựa trên tài liệu của Quỹ công ích Thư viện Shokakutei (thời kỳ cực thịnh thế kỷ 19).</p>
+  </div>
+</section>
+
+<section class="issue-section" id="issue">
+  <div class="section-inner">
+    <span class="section-tag">SOCIAL CHALLENGE</span>
+    <h2 class="section-title">Ba vấn đề xã hội chúng tôi đối mặt</h2>
+    <p class="section-lead">
+      Những vấn đề của bán đảo Chita và thị trấn Minamichita đan xen lẫn nhau.
+    </p>
+    <div class="issue-grid">
+      <div class="issue-card">
+        <span class="tag-no">ISSUE 01</span>
+        <span class="en-label">Abandoned Farmland</span>
+        <h3>Tận dụng đất nông nghiệp bị bỏ hoang</h3>
+        <p>Đất nông nghiệp mất người canh tác tăng lên mỗi năm và chưa được khai thác như một nguồn tài nguyên của địa phương.</p>
+      </div>
+      <div class="issue-card">
+        <span class="tag-no">ISSUE 02</span>
+        <span class="en-label">Employment Creation</span>
+        <h3>Tạo cơ hội việc làm</h3>
+        <p>Ngoài ngành sản xuất sơ cấp, địa phương thiếu nơi làm việc, khiến thế hệ trẻ tiếp tục rời đi. Trên toàn Nhật Bản, ước tính có khoảng 1,46 triệu người sống khép mình (hikikomori); có những người muốn làm việc nhưng không thể tự điều chỉnh mình theo cách làm việc hiện nay.</p>
+        <span class="issue-source">Văn phòng Nội các Nhật Bản, “Khảo sát về nhận thức và đời sống của trẻ em và thanh niên” (2023)</span>
+      </div>
+      <div class="issue-card">
+        <span class="tag-no">ISSUE 03</span>
+        <span class="en-label">At-risk Municipalities</span>
+        <h3>Đô thị có nguy cơ biến mất</h3>
+        <p>Do dân số nữ trẻ giảm mạnh, sự tồn tại của chính địa phương đang bị đe dọa.</p>
+      </div>
+    </div>
+    <div class="mission-statement">
+      <p>Ba vấn đề này không thể giải quyết riêng lẻ. <span class="accent">Mang ngành nghề và việc làm mới đến với đất nông nghiệp bị bỏ hoang.</span> Chúng tôi tin rằng đó là một bước vun đắp tương lai cho bán đảo Chita.</p>
+    </div>
+  </div>
+</section>
+
+<section class="bg-black" id="challenge">
+  <div class="section-inner challenge-box">
+    <span class="section-tag">OUR CHALLENGE</span>
+    <h2 class="section-title">Thử thách</h2>
+    <p class="big-line">
+      Tận dụng đất nông nghiệp bị bỏ hoang, tạo cơ hội việc làm, đô thị có nguy cơ biến mất —<span class="accent">một dự án tiếp cận cả ba vấn đề này,</span><br>
+      <span class="closer">chúng tôi khởi động từ bán đảo Chita.</span>
+    </p>
+  </div>
+</section>
+
+<section id="value">
+  <div class="section-inner">
+    <span class="section-tag">OUR VALUE</span>
+    <h2 class="section-title">Điều chúng tôi trân trọng</h2>
+    <div class="mission-statement value-statement">
+      <p>Hướng về điều có ích cho tương lai của địa phương.<br><span class="accent">Vun đắp niềm tin, từng bước đầu tiên một.</span></p>
+    </div>
+  </div>
+</section>
+
+<section class="sake-section" id="sake">
+  <div class="section-inner">
+    <span class="section-tag">SUGARCANE SPIRITS</span>
+    <h2 class="section-title">Rượu mía<br>Awaseru-zake – rượu hòa hợp cùng bạn</h2>
+    <p class="section-lead">
+      Chúng tôi hướng tới làm rượu từ cây mía trồng trên đất nông nghiệp bị bỏ hoang.<br>
+      Rượu vang mía (sugar wine) được làm bằng cách lên men, và rượu rum được làm bằng cách chưng cất.<br>
+      Chúng tôi gọi chung hai loại này là “rượu mía”.
+    </p>
+    <div class="concept-box">
+      <p class="concept-head"><span class="nb">Không phải con người</span><span class="nb">phải chiều theo rượu,</span><br><span class="accent">mà rượu hòa hợp với con người.</span></p>
+      <ul class="concept-list">
+        <li>Hòa hợp <span>với nguyên liệu</span></li>
+        <li>Hòa hợp <span>với men</span></li>
+        <li>Hòa hợp <span>với cách pha</span></li>
+        <li>Hòa hợp <span>với con người</span></li>
+        <li>Hòa hợp <span>với vùng đất</span></li>
+      </ul>
+      <p class="concept-foot">Chúng tôi hướng tới một loại rượu riêng của bán đảo Chita, có thể làm ra theo nhiều cách phù hợp với món ăn, người uống và khung cảnh của từng ngày.</p>
+      <div class="concept-work">
+        <p class="concept-work-head"><span class="nb">Không phải con người phải chiều theo công việc,</span><span class="nb">mà công việc phù hợp với con người.</span></p>
+        <p>Việc gì làm được trong ngày, ai làm được thì làm, làm được bao nhiêu thì làm bấy nhiêu. Vừa điều chỉnh cách làm việc theo từng người, chúng tôi vừa khai hoang ruộng đồng, trồng mía và ủ rượu.</p>
+        <p class="concept-work-foot">Hòa hợp với người làm, hòa hợp với người uống.<br>Đó là “rượu hòa hợp” của chúng tôi.</p>
+      </div>
+    </div>
+    <p class="source-note">* Chúng tôi hiện đang chuẩn bị để xin giấy phép sản xuất rượu. Chúng tôi chưa sản xuất hay bán rượu.</p>
+  </div>
+</section>
+
+<section id="business">
+  <div class="section-inner">
+    <span class="section-tag">WHAT WE WILL DO</span>
+    <h2 class="section-title">Việc chúng tôi làm</h2>
+    <p class="section-lead">
+      Chính vì vẫn đang ở giai đoạn chuẩn bị, chúng tôi muốn nói rõ những gì mình sẽ làm.<br>
+      Từ cánh đồng đến ly rượu, tất cả đều được làm ra ngay trên bán đảo Chita.
+    </p>
+    <div class="cards">
+      <div class="card">
+        <span class="num">01</span>
+        <h3>Trồng mía</h3>
+        <p>Chúng tôi thuê lại những mảnh đất nông nghiệp bị bỏ hoang đã mất người canh tác để trồng mía. Bước đầu tiên bắt đầu từ một thửa ruộng nhỏ khoảng 420 m² tại thị trấn Minamichita. Vừa trò chuyện với những người sản xuất địa phương, chúng tôi vừa hồi sinh từng thửa ruộng một.</p>
+      </div>
+      <div class="card">
+        <span class="num">02</span>
+        <h3>Làm rượu mía</h3>
+        <p>Hướng tới việc có được giấy phép sản xuất rượu, chúng tôi xây dựng hệ thống để làm rượu vang mía và rượu rum từ cây mía tự trồng. Từ cánh đồng đến chai rượu – biến tất cả thành công việc mới cho địa phương.</p>
+      </div>
+      <div class="card">
+        <span class="num">03</span>
+        <h3>Chăm sóc đất đai và đời sống</h3>
+        <p>Chỉnh trang rừng tre và rừng cây bị bỏ mặc, cải tạo nhà bỏ trống, tạo không gian học tập… Song song với việc làm rượu, chúng tôi từng chút một tận dụng các nguồn tài nguyên của địa phương.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="bg-black" id="join">
+  <div class="section-inner">
+    <span class="section-tag">JOIN US</span>
+    <h2 class="section-title">Cùng tham gia</h2>
+    <p class="section-lead">
+      Từ khi cây mía lớn lên đến khi thành một ly rượu.<br>
+      Mong bạn cùng dõi theo chặng đường ấy.
+    </p>
+    <div class="join-grid">
+      <div class="join-card">
+        <span class="num">01</span>
+        <h3>Theo dõi trên Instagram</h3>
+        <p>Chúng tôi chia sẻ về sự thay đổi của cánh đồng và những người cùng tham gia.</p>
+        <a class="join-btn" href="https://www.instagram.com/chitaichi_/" target="_blank" rel="noopener">Theo dõi @chitaichi_</a>
+      </div>
+      <div class="join-card">
+        <span class="num">02</span>
+        <h3>Đến thăm cánh đồng</h3>
+        <p>Chúng tôi đang chuẩn bị các cơ hội để bạn cùng tham gia như phụ giúp việc đồng áng hay thu hoạch. Chúng tôi sẽ thông báo ngay khi có kế hoạch cụ thể.</p>
+      </div>
+      <div class="join-card">
+        <span class="num">03</span>
+        <h3>Cùng hợp tác</h3>
+        <p>Chúng tôi mong nhận được liên hệ từ người dân địa phương và doanh nghiệp về đất đai, nhà bỏ trống hay đề xuất hợp tác.</p>
+        <a class="join-btn" href="#contact">Đến trang liên hệ</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="news">
+  <div class="section-inner">
+    <span class="section-tag">NEWS</span>
+    <h2 class="section-title">Tin tức</h2>
+    <ul class="news-list">
+      <li><time>2026.11</time><p>Chitaichi Co., Ltd. dự kiến được thành lập.</p></li>
+      <li><time>2026.10</time><p>Chúng tôi đang tham gia giai đoạn tăng tốc (Acceleration Stage) của AICHI STARTUP BATTLE 2026.</p></li>
+    </ul>
+  </div>
+</section>
+
+<section id="profile">
+  <div class="section-inner">
+    <span class="section-tag">COMPANY PROFILE</span>
+    <h2 class="section-title">Thông tin công ty</h2>
+    <p class="section-lead">
+      Chitaichi Co., Ltd. hiện đang trong giai đoạn chuẩn bị thành lập, với tư cách là một doanh nghiệp tạo ra ngành nghề và việc làm mới cho ngành sản xuất sơ cấp của bán đảo Chita.
+      Trước khi chính thức đăng ký pháp nhân, chúng tôi công khai tình hình xây dựng kế hoạch kinh doanh.
+    </p>
+    <table class="profile-table">
+      <tr><th>Tên công ty</th><td>Chitaichi Co., Ltd. (đang thành lập)<span class="note-pending">Chưa thành lập</span></td></tr>
+      <tr><th>Thành lập</th><td>Tháng 11 năm 2026 (dự kiến)</td></tr>
+      <tr><th>Lĩnh vực kinh doanh</th><td>Trồng mía; sản xuất rượu mía (rượu vang mía, rượu rum) (đang chuẩn bị xin giấy phép sản xuất rượu); tận dụng đất nông nghiệp bị bỏ hoang, rừng tre và nhà bỏ trống; cùng các hoạt động khác</td></tr>
+      <tr><th>Khu vực hoạt động</th><td>Bán đảo Chita, tỉnh Aichi (thị trấn Minamichita)</td></tr>
+      <tr><th>Tình trạng hiện tại</th><td>Đang chuẩn bị thành lập công ty<span class="note-pending">Giai đoạn chuẩn bị</span></td></tr>
+      <tr><th>Địa chỉ và người đại diện</th><td>Thông tin chi tiết sẽ được công bố sau khi việc thành lập công ty được xác nhận</td></tr>
+    </table>
+  </div>
+</section>
+
+<section class="member-section" id="members">
+  <div class="section-inner">
+    <span class="section-tag">MEMBERS</span>
+    <h2 class="section-title" style="color:var(--white);">Giới thiệu thành viên</h2>
+    <div class="member-hype">Thế hệ trẻ gánh vác tương lai của bán đảo Chita</div>
+    <p class="member-sub">Bốn người chúng tôi cùng nhau bước những bước đầu tiên.</p>
+
+    <div class="member-grid">
+      <div class="member-card">
+        <div class="member-plate"><img src="../assets/member-uchida.png" alt="Hình minh họa Kairi Uchida" loading="lazy"></div>
+        <div class="member-role">CEO</div>
+        <div class="member-name" data-noi18n>内田 かいり</div>
+        <div class="member-en">KAIRI UCHIDA</div>
+      </div>
+      <div class="member-card">
+        <div class="member-plate"><img src="../assets/member-tsuchiya.png" alt="Hình minh họa Marina Tsuchiya (Marina Azuchi)" loading="lazy"></div>
+        <div class="member-role">COO</div>
+        <div class="member-name" data-noi18n>土屋 真理奈<span class="member-alias">（安土 真理奈）</span></div>
+        <div class="member-en">MARINA TSUCHIYA</div>
+      </div>
+      <div class="member-card">
+        <div class="member-plate"><img src="../assets/member-matsuzaki.png" alt="Hình minh họa Akihiro Matsuzaki" loading="lazy"></div>
+        <div class="member-role">CTO</div>
+        <div class="member-name" data-noi18n>松﨑 旭洋</div>
+        <div class="member-en">AKIHIRO MATSUZAKI</div>
+        <div class="member-note">Thành viên ban điều hành Dragon Brewing</div>
+      </div>
+      <div class="member-card">
+        <div class="member-plate"><img src="../assets/member-toyama.png" alt="Hình minh họa Ayako Toyama" loading="lazy"></div>
+        <div class="member-role">CHO</div>
+        <div class="member-name" data-noi18n>とやま あやこ</div>
+        <div class="member-en">AYAKO TOYAMA</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="bg-black" id="contact">
+  <div class="section-inner">
+    <span class="section-tag">CONTACT</span>
+    <h2 class="section-title">Liên hệ</h2>
+    <div class="contact-box">
+      <p>
+        Chitaichi Co., Ltd. hiện đang trong giai đoạn chuẩn bị thành lập, nên có thể có trường hợp chúng tôi chưa thể đáp ứng yêu cầu của bạn.
+        Nếu bạn muốn hợp tác hoặc ủng hộ hoạt động của chúng tôi, vui lòng liên hệ qua đường dẫn dưới đây.
+      </p>
+      <a class="contact-btn" href="mailto:info@chitaichi.co.jp">Liên hệ tại đây</a>
+      <div class="contact-note">info@chitaichi.co.jp</div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="gold-line"></div>
+  <p class="alcohol-note">Tại Nhật Bản, người dưới 20 tuổi uống rượu là vi phạm pháp luật.<br>Chitaichi hiện đang trong giai đoạn chuẩn bị để xin giấy phép sản xuất rượu và chưa sản xuất hay bán rượu.</p>
+  <span class="copyright">&copy; 2026 Chitaichi Co., Ltd. (đang thành lập) All Rights Reserved.</span>
+</footer>
+
+</div><!-- /.site-frame -->
+
+<script>
+  function toggleNav(){
+    var btn = document.getElementById('navToggle');
+    var panel = document.getElementById('navPanel');
+    var isOpen = panel.classList.toggle('open');
+    btn.classList.toggle('open', isOpen);
+    btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+  }
+  // 言語メニューは、外側を押したら閉じる
+  document.addEventListener('click', function(e){
+    var m = document.querySelector('.lang-menu');
+    if(m && m.open && !m.contains(e.target)){ m.open = false; }
+  });
+  function closeNav(){
+    document.getElementById('navToggle').classList.remove('open');
+    document.getElementById('navPanel').classList.remove('open');
+    document.getElementById('navToggle').setAttribute('aria-expanded','false');
+  }
+</script>
+
+</body>
+</html>
