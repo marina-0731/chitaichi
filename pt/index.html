@@ -31,6 +31,9 @@
 <link rel="alternate" hreflang="pt-BR" href="https://chitaichi.co.jp/pt/">
 <link rel="alternate" hreflang="vi" href="https://chitaichi.co.jp/vi/">
 <link rel="alternate" hreflang="fil" href="https://chitaichi.co.jp/fil/">
+<link rel="alternate" hreflang="fr" href="https://chitaichi.co.jp/fr/">
+<link rel="alternate" hreflang="it" href="https://chitaichi.co.jp/it/">
+<link rel="alternate" hreflang="es" href="https://chitaichi.co.jp/es/">
 <link rel="alternate" hreflang="x-default" href="https://chitaichi.co.jp/">
 <style>
   @import url('https://fonts.googleapis.com/css2?family=BIZ+UDPMincho:wght@400;700&display=swap');
@@ -142,7 +145,7 @@
     max-height:0;overflow:hidden;
     transition:max-height .3s ease;
   }
-  .nav-panel.open{max-height:900px;}
+  .nav-panel.open{max-height:calc(100vh - 60px);max-height:calc(100dvh - 60px);overflow-y:auto;overscroll-behavior:contain;}
   .nav-panel ul{list-style:none;display:flex;flex-direction:column;padding:6px 24px 18px;}
   .nav-panel a{
     display:block;padding:13px 0;color:var(--white);font-size:0.92rem;letter-spacing:0.08em;
@@ -490,6 +493,9 @@
         <li><a href="/pt/" lang="pt-BR" hreflang="pt-BR" aria-current="page">Português</a></li>
         <li><a href="/vi/" lang="vi" hreflang="vi">Tiếng Việt</a></li>
         <li><a href="/fil/" lang="fil" hreflang="fil">Filipino</a></li>
+        <li><a href="/fr/" lang="fr" hreflang="fr">Français</a></li>
+        <li><a href="/it/" lang="it" hreflang="it">Italiano</a></li>
+        <li><a href="/es/" lang="es" hreflang="es">Español</a></li>
       </ul>
     </details>
     <button class="nav-toggle" id="navToggle" aria-label="Abrir menu" aria-expanded="false" onclick="toggleNav()">
@@ -521,6 +527,9 @@
           <a href="/pt/" lang="pt-BR" hreflang="pt-BR" aria-current="page">Português</a>
           <a href="/vi/" lang="vi" hreflang="vi">Tiếng Việt</a>
           <a href="/fil/" lang="fil" hreflang="fil">Filipino</a>
+          <a href="/fr/" lang="fr" hreflang="fr">Français</a>
+          <a href="/it/" lang="it" hreflang="it">Italiano</a>
+          <a href="/es/" lang="es" hreflang="es">Español</a>
       </div>
     </div>
   </nav>

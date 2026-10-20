@@ -61,7 +61,7 @@ python3 -m http.server 4321
 
 ## 多言語ページ
 
-日本語の `index.html` が元で、ほかの7言語のページは `i18n/build.py` で作る。
+日本語の `index.html` が元で、ほかの10言語のページは `i18n/build.py` で作る。
 
 | 言語 | URL | 訳文 |
 |---|---|---|
@@ -72,6 +72,9 @@ python3 -m http.server 4321
 | ポルトガル語（ブラジル） | /pt/ | i18n/pt-BR.json |
 | ベトナム語 | /vi/ | i18n/vi.json |
 | フィリピノ語 | /fil/ | i18n/fil.json |
+| フランス語 | /fr/ | i18n/fr.json |
+| イタリア語 | /it/ | i18n/it.json |
+| スペイン語（スペイン） | /es/ | i18n/es.json |
 
 **各言語のフォルダの `index.html` は直接直さない。** 日本語を直したら、次の順で更新する。
 
