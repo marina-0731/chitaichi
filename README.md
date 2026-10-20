@@ -20,7 +20,7 @@ https://chitaichi.co.jp/ （独自ドメイン。DNSはエックスドメイン�
 index.html                        全ページ（1枚もの・セクション遷移）
 assets/
   logo.png                        知多壱ロゴ
-  map-chita-peninsula.png         知多半島の地図
+  （知多半島の地図は index.html に SVG で直接埋め込み。国土数値情報の行政区域データから作成）
   key-visual.webp                 メインビジュアル（夕日とボトル。商品はイメージ）
   ogp.jpg                         SNSで共有したときの画像（メインビジュアルを1200x675に縮小）
   member-*.png                    メンバーのイラスト（白い背景を透明にしたもの。元画像は 20_chitaichi/メンバーイラスト/）
