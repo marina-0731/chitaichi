@@ -23,7 +23,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="assets/logo.png" type="image/png">
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=Yuji+Syuku&family=Noto+Serif+JP:wght@400;500;700;900&family=Shippori+Mincho:wght@400;500;600;700&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=BIZ+UDPMincho:wght@400;700&display=swap');
 
   :root{
     --black:#111111;
@@ -39,9 +39,8 @@
   html{scroll-behavior:smooth;}
 
   body{
-    /* ご指定の「Sモトヤ新楷書」を最優先。同フォントが端末に無い場合は、雰囲気の近い
-       毛筆系フォント(Yuji Syuku)→明朝体の順にフォールバックします */
-    font-family:"S-Motoya-ShinKaisho","Motoya Shin Kaisho","Yuji Syuku",'Shippori Mincho','Noto Serif JP',serif;
+    /* 読みやすさのため、UDフォント（モリサワ BIZ UDP明朝）で統一する */
+    font-family:'BIZ UDPMincho','BIZ UD明朝','Hiragino Mincho ProN',serif;
     background:#0c0c0c;
     color:var(--ink);
     line-height:1.9;
@@ -167,7 +166,7 @@
     font-size:clamp(0.95rem, 2.2vw, 1.3rem);
     color:var(--gold);
     letter-spacing:0.32em;
-    font-weight:600;
+    font-weight:700;
   }
   .hero-white .divider{width:64px;height:2px;background:var(--red);margin:30px auto;}
   .scroll-cue{
@@ -183,7 +182,7 @@
   }
   .section-tag{
     display:block;text-align:center;font-size:0.75rem;letter-spacing:0.3em;
-    color:var(--gold);margin-bottom:10px;font-weight:600;
+    color:var(--gold);margin-bottom:10px;font-weight:700;
   }
   h2.section-title{
     text-align:center;font-size:clamp(1.5rem, 3.4vw, 2.1rem);font-weight:700;
@@ -233,7 +232,7 @@
     padding:38px 30px;text-align:center;border-top:4px solid var(--red);
   }
   .stat-tile .stat-num{
-    font-size:clamp(2rem,5vw,2.8rem);font-weight:900;color:var(--gold-light);
+    font-size:clamp(2rem,5vw,2.8rem);font-weight:700;color:var(--gold-light);
     letter-spacing:0.02em;margin-bottom:10px;display:block;
   }
   .stat-tile .stat-label{font-size:0.9rem;letter-spacing:0.05em;margin-bottom:12px;color:var(--white);}
@@ -278,7 +277,7 @@
   .challenge-box .big-line .accent{color:var(--gold-light);}
   .challenge-box .big-line .closer{
     display:inline-block;margin-top:14px;
-    font-size:1.1em;font-weight:900;letter-spacing:0.14em;color:var(--white);
+    font-size:1.1em;font-weight:700;letter-spacing:0.14em;color:var(--white);
   }
   .challenge-numbers{
     display:flex;justify-content:center;gap:14px;margin:36px 0 10px;flex-wrap:wrap;
@@ -297,7 +296,7 @@
     background:var(--white);border:1px solid #ecdfc3;border-top:3px solid var(--gold);
     padding:34px 26px;text-align:center;box-shadow:0 6px 20px rgba(0,0,0,0.05);
   }
-  .card .num{font-family:'Noto Serif JP',serif;font-size:1.6rem;color:var(--red);font-weight:700;margin-bottom:14px;display:block;}
+  .card .num{font-family:inherit;font-size:1.6rem;color:var(--red);font-weight:700;margin-bottom:14px;display:block;}
   .card h3{font-size:1.05rem;letter-spacing:0.06em;margin-bottom:14px;color:var(--black);}
   .card p{font-size:0.88rem;color:#4a453f;}
 
@@ -307,7 +306,7 @@
   .profile-table tr:last-child{border-bottom:none;}
   .profile-table th{
     width:200px;text-align:left;padding:20px 26px;background:var(--red);color:var(--white);
-    font-weight:600;font-size:0.88rem;letter-spacing:0.08em;vertical-align:top;
+    font-weight:700;font-size:0.88rem;letter-spacing:0.08em;vertical-align:top;
   }
   .profile-table td{padding:20px 26px;font-size:0.92rem;color:var(--ink);vertical-align:top;}
   .note-pending{
@@ -323,7 +322,7 @@
   .member-section{background:var(--black);color:var(--white);text-align:center;}
   .member-hype{
     font-size:clamp(1.3rem,3.6vw,2rem);
-    font-weight:900;color:var(--gold-light);
+    font-weight:700;color:var(--gold-light);
     letter-spacing:0.06em;margin-bottom:10px;
     transform:rotate(-1.5deg);
     display:inline-block;
@@ -369,7 +368,7 @@
   /* ===== Join ===== */
   .join-grid{display:grid;grid-template-columns:1fr;gap:18px;max-width:480px;margin:0 auto;}
   .join-card{border:1px solid rgba(184,147,63,0.5);padding:32px 24px;text-align:center;}
-  .join-card .num{font-family:'Noto Serif JP',serif;font-size:1.4rem;color:var(--gold-light);font-weight:700;display:block;margin-bottom:10px;}
+  .join-card .num{font-family:inherit;font-size:1.4rem;color:var(--gold-light);font-weight:700;display:block;margin-bottom:10px;}
   .join-card h3{font-size:1.05rem;letter-spacing:0.06em;margin-bottom:12px;}
   .join-card p{font-size:0.86rem;color:rgba(250,247,242,0.75);}
   .join-btn{display:inline-block;margin-top:18px;padding:10px 22px;background:var(--red);color:var(--white);font-size:0.82rem;letter-spacing:0.1em;border:1px solid var(--red);transition:background .2s,color .2s;}
@@ -378,7 +377,7 @@
   /* ===== News ===== */
   .news-list{list-style:none;max-width:640px;margin:0 auto;border-top:1px solid #e7e0d3;}
   .news-list li{display:flex;gap:20px;padding:18px 4px;border-bottom:1px solid #e7e0d3;align-items:baseline;}
-  .news-list time{font-family:'Noto Serif JP',serif;color:var(--red);font-weight:700;font-size:0.88rem;letter-spacing:0.06em;flex-shrink:0;}
+  .news-list time{font-family:inherit;color:var(--red);font-weight:700;font-size:0.88rem;letter-spacing:0.06em;flex-shrink:0;}
   .news-list p{font-size:0.92rem;color:var(--ink);}
 
   /* ===== Alcohol notice (footer) ===== */
@@ -415,9 +414,9 @@
     overflow:hidden;
   }
   .member-plate img{position:absolute;inset:11%;width:78%;height:78%;object-fit:contain;}
-  .member-role{font-family:'Noto Serif JP',serif;font-size:0.78rem;letter-spacing:0.32em;color:var(--gold-light);margin-bottom:4px;}
+  .member-role{font-family:inherit;font-size:0.78rem;letter-spacing:0.32em;color:var(--gold-light);margin-bottom:4px;}
   .member-name{font-size:1.05rem;letter-spacing:0.14em;color:var(--white);font-weight:700;}
-  .member-en{font-family:'Noto Serif JP',serif;font-size:0.6rem;letter-spacing:0.22em;color:rgba(250,247,242,0.5);margin-top:2px;}
+  .member-en{font-family:inherit;font-size:0.6rem;letter-spacing:0.22em;color:rgba(250,247,242,0.5);margin-top:2px;}
   .member-note{font-size:0.66rem;color:rgba(217,190,127,0.8);margin-top:6px;letter-spacing:0.06em;}
 </style>
 </head>
