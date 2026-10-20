@@ -8,7 +8,9 @@
 
 GitHub Pages。`main` ブランチのルートがそのまま公開される。
 
-https://marina-0731.github.io/chitaichi/
+https://chitaichi.co.jp/ （独自ドメイン。DNSはエックスドメインで管理。2026-10に切り替え）
+
+旧URL https://marina-0731.github.io/chitaichi/ は独自ドメインへ自動で転送される。
 
 **`main` にマージした時点で本番に反映される。** 変更はブランチを切って、PR で確認してから入れる。
 
