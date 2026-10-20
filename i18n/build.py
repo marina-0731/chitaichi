@@ -32,6 +32,9 @@ LANGS = [
     ('pt-BR', 'pt', 'Português', 'pt_BR'),
     ('vi', 'vi', 'Tiếng Việt', 'vi_VN'),
     ('fil', 'fil', 'Filipino', 'fil_PH'),
+    ('fr', 'fr', 'Français', 'fr_FR'),
+    ('it', 'it', 'Italiano', 'it_IT'),
+    ('es', 'es', 'Español', 'es_ES'),
 ]
 CJK = {'ja', 'zh-Hant', 'zh-Hans'}  # 地図の湾名を縦書きのままにする言語
 
