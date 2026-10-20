@@ -21,6 +21,9 @@ index.html                        全ページ（1枚もの・セクション遷
 assets/
   logo.png                        知多壱ロゴ
   map-chita-peninsula.png         知多半島の地図
+  key-visual.webp                 メインビジュアル（夕日とボトル。商品はイメージ）
+  ogp.jpg                         SNSで共有したときの画像（メインビジュアルを1200x675に縮小）
+  member-*.png                    メンバーのイラスト（白い背景を透明にしたもの。元画像は 20_chitaichi/メンバーイラスト/）
 ```
 
 ビルド不要。静的HTMLのみで、外部ライブラリも使っていない。

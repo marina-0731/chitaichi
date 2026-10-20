@@ -18,9 +18,9 @@
 <meta property="og:title" content="株式会社知多壱 | この土地から、次の産業を。">
 <meta property="og:description" content="知多半島・南知多町で、サトウキビを育て、サトウキビ酒づくりを目指しています。">
 <meta property="og:url" content="https://chitaichi.co.jp/">
-<meta property="og:image" content="https://chitaichi.co.jp/assets/logo.png">
+<meta property="og:image" content="https://chitaichi.co.jp/assets/ogp.jpg">
 <meta property="og:locale" content="ja_JP">
-<meta name="twitter:card" content="summary">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="assets/logo.png" type="image/png">
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Yuji+Syuku&family=Noto+Serif+JP:wght@400;500;700;900&family=Shippori+Mincho:wght@400;500;600;700&display=swap');
@@ -329,52 +329,6 @@
     display:inline-block;
   }
   .member-sub{font-size:0.9rem;color:rgba(250,247,242,0.7);margin-bottom:54px;}
-  .silhouette-row{
-    display:flex;justify-content:center;align-items:flex-end;gap:60px;flex-wrap:wrap;margin-bottom:44px;
-  }
-  .silhouette-row.row-board{margin-bottom:36px;}
-  .silhouette-slot{text-align:center;}
-  .silhouette-frame{
-    width:180px;height:180px;border-radius:50%;
-    background:radial-gradient(circle, rgba(164,29,36,0.9), rgba(124,19,25,0.95));
-    border:2px solid var(--gold);
-    box-shadow:0 0 0 6px rgba(184,147,63,0.12), 0 0 40px rgba(164,29,36,0.35);
-    display:flex;align-items:center;justify-content:center;
-    margin:0 auto 18px;
-    position:relative;
-  }
-  .silhouette-frame svg{width:96px;height:120px;}
-
-  /* President row: larger emphasis */
-  .frame-lg{width:230px;height:230px;}
-  .frame-lg svg{width:124px;height:154px;}
-
-  /* Board member row: smaller, secondary emphasis */
-  .frame-sm{
-    width:120px;height:120px;
-    box-shadow:0 0 0 4px rgba(184,147,63,0.12), 0 0 24px rgba(164,29,36,0.3);
-    margin-bottom:14px;
-  }
-  .frame-sm svg{width:62px;height:78px;}
-
-  @container site (max-width:380px){
-    .silhouette-row{gap:28px;}
-    .frame-lg{width:168px;height:168px;}
-    .frame-lg svg{width:90px;height:112px;}
-    .frame-sm{width:96px;height:96px;}
-    .frame-sm svg{width:50px;height:62px;}
-  }
-
-  .silhouette-role{font-size:0.72rem;letter-spacing:0.2em;color:var(--gold-light);margin-bottom:4px;}
-  .role-lg{font-size:0.82rem;letter-spacing:0.22em;}
-  .role-sm{font-size:0.64rem;letter-spacing:0.16em;color:rgba(217,190,127,0.75);}
-  .silhouette-name{font-size:0.85rem;letter-spacing:0.08em;color:var(--white);font-weight:400;}
-  .name-sm{font-size:0.72rem;color:rgba(250,247,242,0.75);}
-  .coming-soon-tag{
-    display:inline-block;margin-top:8px;
-    font-size:0.7rem;letter-spacing:0.25em;color:rgba(250,247,242,0.5);
-    border:1px solid rgba(184,147,63,0.4);padding:4px 14px;
-  }
 
   /* ===== Contact ===== */
   .contact-box{
@@ -429,6 +383,42 @@
 
   /* ===== Alcohol notice (footer) ===== */
   .alcohol-note{font-size:0.72rem;line-height:1.9;color:rgba(250,247,242,0.7);margin-bottom:14px;}
+
+  /* ===== Key visual ===== */
+  .key-visual{padding:0;background:var(--black);}
+  .key-visual img{display:block;width:100%;height:auto;}
+  .kv-note{font-size:0.68rem;color:rgba(250,247,242,0.6);text-align:right;padding:8px 14px 10px;letter-spacing:0.04em;}
+
+  /* ===== History ===== */
+  .history-box{border-top:1px solid var(--gold);border-bottom:1px solid var(--gold);padding:30px 6px;margin:0 auto 48px;max-width:560px;text-align:center;}
+  .history-tag{display:block;font-size:0.7rem;letter-spacing:0.3em;color:var(--gold);margin-bottom:8px;}
+  .history-head{font-size:1.15rem;font-weight:700;letter-spacing:0.08em;color:var(--black);margin-bottom:14px;}
+  .history-box p{font-size:0.9rem;color:#4a453f;margin-bottom:10px;}
+  .history-box p:last-child{margin-bottom:0;color:var(--red-deep);font-weight:700;}
+  .issue-card .issue-source{display:block;margin-top:12px;font-size:0.66rem;color:rgba(250,247,242,0.45);}
+
+  /* ===== 合わせる酒：働く人 ===== */
+  .concept-work{margin-top:30px;padding-top:26px;border-top:1px solid rgba(184,147,63,0.45);}
+  .concept-work-head{font-size:1.05rem;font-weight:700;letter-spacing:0.05em;line-height:1.9;margin-bottom:12px;color:var(--gold-light);}
+  .concept-work-head .nb{display:inline-block;}
+  .concept-work p{font-size:0.86rem;color:rgba(250,247,242,0.78);}
+  .concept-work .concept-work-foot{margin-top:14px;font-weight:700;color:var(--white);}
+
+  /* ===== Members ===== */
+  .member-sub{font-size:0.9rem;color:rgba(250,247,242,0.7);margin-bottom:44px;}
+  .member-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:34px 18px;max-width:520px;margin:0 auto;}
+  .member-card{text-align:center;}
+  .member-plate{
+    position:relative;width:100%;aspect-ratio:1/1;margin:0 auto 16px;border-radius:50%;
+    background:radial-gradient(circle at 50% 38%, #fffdf8 0%, #f4efe4 62%, #e9dfc9 100%);
+    box-shadow:0 0 0 1px var(--gold), 0 0 0 6px rgba(17,17,17,1), 0 0 0 7px rgba(184,147,63,0.55), 0 18px 40px rgba(0,0,0,0.55);
+    overflow:hidden;
+  }
+  .member-plate img{position:absolute;inset:11%;width:78%;height:78%;object-fit:contain;}
+  .member-role{font-family:'Noto Serif JP',serif;font-size:0.78rem;letter-spacing:0.32em;color:var(--gold-light);margin-bottom:4px;}
+  .member-name{font-size:1.05rem;letter-spacing:0.14em;color:var(--white);font-weight:700;}
+  .member-en{font-family:'Noto Serif JP',serif;font-size:0.6rem;letter-spacing:0.22em;color:rgba(250,247,242,0.5);margin-top:2px;}
+  .member-note{font-size:0.66rem;color:rgba(217,190,127,0.8);margin-top:6px;letter-spacing:0.06em;}
 </style>
 </head>
 <body>
@@ -475,6 +465,11 @@
   <div class="scroll-cue">S C R O L L</div>
 </section>
 
+<section class="key-visual" aria-label="メインビジュアル">
+  <img src="assets/key-visual.webp" alt="夕日の海辺に置かれた知多壱のボトル。「この土地から、次の産業を。」" loading="lazy">
+  <p class="kv-note">※画像はイメージです。商品は現在開発中で、販売はしていません。</p>
+</section>
+
 <section id="area">
   <div class="section-inner">
     <span class="section-tag">OUR HOME</span>
@@ -497,6 +492,13 @@
       愛知県知多半島　｜　5市5町（東海市・大府市・知多市・常滑市・半田市／東浦町・阿久比町・武豊町・美浜町・南知多町）
     </p>
 
+    <div class="history-box">
+      <span class="history-tag">HISTORY</span>
+      <p class="history-head">知多半島は、かつての酒どころ。</p>
+      <p>江戸の頃、知多半島には二百を超える酒蔵が並んでいました。半島で醸された酒は廻船に積まれ、江戸の町へと運ばれていきました。その酒造りは、いまもこの半島の蔵に受け継がれています。</p>
+      <p>この酒どころに、新しい一滴を。わたしたちが選んだのは、サトウキビです。</p>
+    </div>
+
     <div class="stat-grid">
       <div class="stat-tile">
         <span class="stat-num">-67.9%</span>
@@ -509,7 +511,7 @@
         <div class="stat-detail">平成25年度の約865haから、平成28年度には約1,128haへ増加（愛知県 知多農林水産事務所 公表資料より）。担い手不足により、使われない農地が着実に広がっています。</div>
       </div>
     </div>
-    <p class="source-note">※統計は各出典元の公表資料に基づきます。数値は今後の公表資料により更新される場合があります。</p>
+    <p class="source-note">※統計は各出典元の公表資料に基づきます。数値は今後の公表資料により更新される場合があります。<br>※酒蔵の数は、公益財団法人 招鶴亭文庫の資料（19世紀の最盛期）によります。</p>
   </div>
 </section>
 
@@ -531,7 +533,8 @@
         <span class="tag-no">ISSUE 02</span>
         <span class="en-label">Employment Creation</span>
         <h3>雇用機会の創出</h3>
-        <p>地域には一次産業以外の雇用の場が乏しく、若い世代の流出に歯止めがかかりません。</p>
+        <p>地域には一次産業以外の雇用の場が乏しく、若い世代の流出に歯止めがかかりません。全国では約146万人がひきこもりの状態にあるとされ、働きたくても、いまの働き方に自分を合わせられない人がいます。</p>
+        <span class="issue-source">内閣府「こども・若者の意識と生活に関する調査」（2023年）</span>
       </div>
       <div class="issue-card">
         <span class="tag-no">ISSUE 03</span>
@@ -586,6 +589,11 @@
         <li><span>土地に</span>合わせる</li>
       </ul>
       <p class="concept-foot">料理や飲む人、その日の場面に合わせてつくり分けられる、知多半島ならではのお酒を目指します。</p>
+      <div class="concept-work">
+        <p class="concept-work-head"><span class="nb">人が仕事に合わせるのではなく、</span><span class="nb">仕事を人に合わせる。</span></p>
+        <p>その日できることを、できる人が、できるぶんだけ。働き方を人に合わせながら、荒れた畑を拓き、サトウキビを育て、酒を醸していきます。</p>
+        <p class="concept-work-foot">働く人に合わせ、飲む人に合わせる。<br>それが、わたしたちの「合わせる酒」です。</p>
+      </div>
     </div>
     <p class="source-note">※現在、酒類製造免許の取得に向けて準備中です。お酒の製造・販売はまだ行っていません。</p>
   </div>
@@ -603,7 +611,7 @@
       <div class="card">
         <span class="num">01</span>
         <h3>サトウキビを育てる</h3>
-        <p>担い手を失った耕作放棄地をお借りして、サトウキビを育てます。地域の生産者と対話を重ねながら、畑を一枚ずつ取り戻していきます。</p>
+        <p>担い手を失った耕作放棄地をお借りして、サトウキビを育てます。はじめの壱歩は、南知多町の約128坪の小さな畑から。地域の生産者と対話を重ねながら、畑を一枚ずつ取り戻していきます。</p>
       </div>
       <div class="card">
         <span class="num">02</span>
@@ -684,51 +692,33 @@
     <span class="section-tag">MEMBERS</span>
     <h2 class="section-title" style="color:var(--white);">メンバー紹介</h2>
     <div class="member-hype">知多半島の未来を担う若者世代</div>
-    <p class="member-sub">この物語を動かすメンバーは、まもなく発表します。</p>
+    <p class="member-sub">4人で、はじめの壱歩を踏み出します。</p>
 
-    <div class="silhouette-row row-president">
-      <div class="silhouette-slot">
-        <div class="silhouette-frame frame-lg">
-          <svg viewBox="0 0 100 140" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="50" cy="32" r="20" fill="#111111"/>
-            <path d="M22,140 L22,92 Q22,60 50,60 Q78,60 78,92 L78,140 Z" fill="#111111"/>
-          </svg>
-        </div>
-        <div class="silhouette-role role-lg">PRESIDENT</div>
-        <div class="silhouette-name">coming soon</div>
+    <div class="member-grid">
+      <div class="member-card">
+        <div class="member-plate"><img src="assets/member-uchida.png" alt="内田翔璃のイラスト" loading="lazy"></div>
+        <div class="member-role">CEO</div>
+        <div class="member-name">内田 翔璃</div>
+        <div class="member-en">KAIRI UCHIDA</div>
       </div>
-      <div class="silhouette-slot">
-        <div class="silhouette-frame frame-lg">
-          <svg viewBox="0 0 100 140" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="50" cy="32" r="20" fill="#111111"/>
-            <path d="M22,140 L22,92 Q22,60 50,60 Q78,60 78,92 L78,140 Z" fill="#111111"/>
-          </svg>
-        </div>
-        <div class="silhouette-role role-lg">PRESIDENT</div>
-        <div class="silhouette-name">coming soon</div>
+      <div class="member-card">
+        <div class="member-plate"><img src="assets/member-tsuchiya.png" alt="土屋真理奈のイラスト" loading="lazy"></div>
+        <div class="member-role">COO</div>
+        <div class="member-name">土屋 真理奈</div>
+        <div class="member-en">MARINA TSUCHIYA</div>
       </div>
-    </div>
-
-    <div class="silhouette-row row-board">
-      <div class="silhouette-slot">
-        <div class="silhouette-frame frame-sm">
-          <svg viewBox="0 0 100 140" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="50" cy="32" r="20" fill="#111111"/>
-            <path d="M22,140 L22,92 Q22,60 50,60 Q78,60 78,92 L78,140 Z" fill="#111111"/>
-          </svg>
-        </div>
-        <div class="silhouette-role role-sm">BOARD MEMBER</div>
-        <div class="silhouette-name name-sm">coming soon</div>
+      <div class="member-card">
+        <div class="member-plate"><img src="assets/member-matsuzaki.png" alt="松﨑旭洋のイラスト" loading="lazy"></div>
+        <div class="member-role">CTO</div>
+        <div class="member-name">松﨑 旭洋</div>
+        <div class="member-en">AKIHIRO MATSUZAKI</div>
+        <div class="member-note">Dragon Brewing 理事</div>
       </div>
-      <div class="silhouette-slot">
-        <div class="silhouette-frame frame-sm">
-          <svg viewBox="0 0 100 140" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="50" cy="32" r="20" fill="#111111"/>
-            <path d="M22,140 L22,92 Q22,60 50,60 Q78,60 78,92 L78,140 Z" fill="#111111"/>
-          </svg>
-        </div>
-        <div class="silhouette-role role-sm">BOARD MEMBER</div>
-        <div class="silhouette-name name-sm">coming soon</div>
+      <div class="member-card">
+        <div class="member-plate"><img src="assets/member-toyama.png" alt="外山綾子のイラスト" loading="lazy"></div>
+        <div class="member-role">CHO</div>
+        <div class="member-name">外山 綾子</div>
+        <div class="member-en">AYAKO TOYAMA</div>
       </div>
     </div>
   </div>
