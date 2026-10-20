@@ -3,7 +3,7 @@
 {
   "name": "Chitaichi Homepage",
   "schemaVersion": 1,
-  "description": "株式会社知多壱（ラム酒製造・設立準備中）の会社ホームページ。会社概要、事業内容（OEM製造方式の説明）、沿革・スケジュール、お問い合わせで構成。黒・赤・白・金を基調にした和モダン・高級感のあるデザイン。",
+  "description": "株式会社知多壱（設立準備中）の会社ホームページ。知多半島・南知多町でサトウキビを育て、サトウキビ酒づくりを目指す。黒・赤・白・金を基調にした和モダンのデザイン。",
   "mcpTools": [],
   "mcpServerNames": []
 }
@@ -12,7 +12,16 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>株式会社知多壱（設立準備中）| 知多半島の未来を耕す、蒸留プロジェクト始動</title>
+<title>株式会社知多壱（設立準備中）| この土地から、次の産業を。</title>
+<meta name="description" content="愛知県知多半島・南知多町で、耕作放棄地にサトウキビを育て、「合わせる酒」サトウキビ酒づくりを目指す株式会社知多壱（設立準備中）のホームページです。">
+<meta property="og:type" content="website">
+<meta property="og:title" content="株式会社知多壱 | この土地から、次の産業を。">
+<meta property="og:description" content="知多半島・南知多町で、サトウキビを育て、サトウキビ酒づくりを目指しています。">
+<meta property="og:url" content="https://chitaichi.co.jp/">
+<meta property="og:image" content="https://chitaichi.co.jp/assets/logo.png">
+<meta property="og:locale" content="ja_JP">
+<meta name="twitter:card" content="summary">
+<link rel="icon" href="assets/logo.png" type="image/png">
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Yuji+Syuku&family=Noto+Serif+JP:wght@400;500;700;900&family=Shippori+Mincho:wght@400;500;600;700&display=swap');
 
@@ -38,7 +47,6 @@
     line-height:1.9;
     letter-spacing:0.02em;
   }
-  body.gate-lock{overflow:hidden;height:100vh;}
 
   a{color:inherit;text-decoration:none;}
 
@@ -82,51 +90,6 @@
     background:rgba(0,0,0,0.25);
   }
 
-  /* ===== Age Gate ===== */
-  .age-gate{
-    position:fixed;inset:0;z-index:9999;
-    display:flex;align-items:center;justify-content:center;
-    background:
-      radial-gradient(circle at 50% 30%, rgba(164,29,36,0.55), rgba(17,17,17,0.97) 65%),
-      linear-gradient(180deg,#111 0%, #1a1512 60%, #111 100%);
-    padding:24px;
-    transition:opacity .6s ease;
-  }
-  .age-gate.gate-hidden{opacity:0;pointer-events:none;}
-  .age-box{
-    max-width:440px;width:100%;
-    text-align:center;
-    color:var(--white);
-    padding:44px 34px;
-    border:1px solid var(--gold);
-    background:rgba(17,17,17,0.5);
-  }
-  .age-logo{width:96px;height:96px;object-fit:contain;margin:0 auto 22px;display:block;}
-  .age-text{font-size:0.86rem;color:rgba(250,247,242,0.8);margin-bottom:14px;}
-  .age-title{font-size:1.4rem;letter-spacing:0.08em;margin-bottom:26px;color:var(--white);}
-  .age-buttons{display:flex;gap:16px;justify-content:center;margin-bottom:20px;}
-  .age-btn{
-    min-width:120px;
-    padding:13px 0;
-    font-size:0.95rem;
-    letter-spacing:0.2em;
-    cursor:pointer;
-    border:1px solid var(--gold);
-    background:transparent;
-    color:var(--white);
-    font-family:inherit;
-    transition:background .2s,color .2s;
-  }
-  .age-yes{background:var(--red);border-color:var(--red);}
-  .age-yes:hover{background:var(--red-deep);}
-  .age-no:hover{background:rgba(250,247,242,0.1);}
-  .age-sub{font-size:0.7rem;color:rgba(250,247,242,0.55);}
-  @media (max-width:380px){
-    .age-box{padding:30px 18px;}
-    .age-buttons{gap:10px;}
-    .age-btn{min-width:0;flex:1;padding:12px 0;font-size:0.85rem;}
-  }
-  .gate-denied-msg .age-text{margin-bottom:0;}
 
   /* ===== Header ===== */
   header{
@@ -170,7 +133,7 @@
     max-height:0;overflow:hidden;
     transition:max-height .3s ease;
   }
-  .nav-panel.open{max-height:480px;}
+  .nav-panel.open{max-height:680px;}
   .nav-panel ul{list-style:none;display:flex;flex-direction:column;padding:6px 24px 18px;}
   .nav-panel a{
     display:block;padding:13px 0;color:var(--white);font-size:0.92rem;letter-spacing:0.08em;
@@ -431,30 +394,46 @@
     padding:36px 24px;font-size:0.76rem;letter-spacing:0.08em;
   }
   footer .gold-line{width:40px;height:1px;background:var(--gold);margin:0 auto 16px;}
+
+  /* ===== Hero sub copy ===== */
+  .hero-sub{font-size:clamp(0.9rem,2.2vw,1.05rem);color:#4a453f;letter-spacing:0.06em;margin-bottom:18px;}
+
+  /* ===== Value ===== */
+  .value-statement p{font-size:clamp(1.15rem,3vw,1.5rem);line-height:2;}
+
+  /* ===== Sugarcane spirits ===== */
+  .sake-section{background:linear-gradient(180deg, rgba(184,147,63,0.08), rgba(255,255,255,0) 40%), var(--white);border-top:1px solid #ecdfc3;}
+  .concept-box{background:var(--black);color:var(--white);padding:40px 26px;text-align:center;border-top:4px solid var(--red);}
+  .concept-head{font-size:clamp(1.15rem,3vw,1.45rem);font-weight:700;letter-spacing:0.06em;line-height:1.9;margin-bottom:26px;}
+  .concept-head .accent{color:var(--gold-light);}
+  .concept-head .nb{display:inline-block;}
+  .concept-list{list-style:none;display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-bottom:24px;}
+  .concept-list li{border:1px solid var(--gold);padding:6px 14px;font-size:0.82rem;letter-spacing:0.08em;}
+  .concept-list li span{color:var(--gold-light);}
+  .concept-foot{font-size:0.86rem;color:rgba(250,247,242,0.75);}
+
+  /* ===== Join ===== */
+  .join-grid{display:grid;grid-template-columns:1fr;gap:18px;max-width:480px;margin:0 auto;}
+  .join-card{border:1px solid rgba(184,147,63,0.5);padding:32px 24px;text-align:center;}
+  .join-card .num{font-family:'Noto Serif JP',serif;font-size:1.4rem;color:var(--gold-light);font-weight:700;display:block;margin-bottom:10px;}
+  .join-card h3{font-size:1.05rem;letter-spacing:0.06em;margin-bottom:12px;}
+  .join-card p{font-size:0.86rem;color:rgba(250,247,242,0.75);}
+  .join-btn{display:inline-block;margin-top:18px;padding:10px 22px;background:var(--red);color:var(--white);font-size:0.82rem;letter-spacing:0.1em;border:1px solid var(--red);transition:background .2s,color .2s;}
+  .join-btn:hover{background:transparent;color:var(--gold-light);border-color:var(--gold-light);}
+
+  /* ===== News ===== */
+  .news-list{list-style:none;max-width:640px;margin:0 auto;border-top:1px solid #e7e0d3;}
+  .news-list li{display:flex;gap:20px;padding:18px 4px;border-bottom:1px solid #e7e0d3;align-items:baseline;}
+  .news-list time{font-family:'Noto Serif JP',serif;color:var(--red);font-weight:700;font-size:0.88rem;letter-spacing:0.06em;flex-shrink:0;}
+  .news-list p{font-size:0.92rem;color:var(--ink);}
+
+  /* ===== Alcohol notice (footer) ===== */
+  .alcohol-note{font-size:0.72rem;line-height:1.9;color:rgba(250,247,242,0.7);margin-bottom:14px;}
 </style>
 </head>
-<body class="gate-lock">
+<body>
 
 <div class="bg-decor" aria-hidden="true"></div>
-
-<div class="age-gate" id="age-gate">
-  <div class="age-box">
-    <img class="age-logo" src="assets/logo.png" alt="知多壱">
-    <div id="gate-question">
-      <p class="age-text">当サイトはお酒（アルコール飲料）に関する事業計画の情報を含みます。</p>
-      <h2 class="age-title">あなたは20歳以上ですか？</h2>
-      <div class="age-buttons">
-        <button class="age-btn age-yes" onclick="ageConfirm(true)">YES</button>
-        <button class="age-btn age-no" onclick="ageConfirm(false)">NO</button>
-      </div>
-      <p class="age-sub">20歳未満の飲酒は法律で禁止されています。</p>
-    </div>
-    <div id="gate-denied" class="gate-denied-msg" style="display:none;">
-      <h2 class="age-title">申し訳ございません</h2>
-      <p class="age-text">20歳未満の方は、本サイトをご覧いただけません。</p>
-    </div>
-  </div>
-</div>
 
 <div class="site-frame">
 
@@ -473,7 +452,11 @@
       <li><a href="#area" onclick="closeNav()">知多半島</a></li>
       <li><a href="#issue" onclick="closeNav()">社会課題</a></li>
       <li><a href="#challenge" onclick="closeNav()">挑戦</a></li>
+      <li><a href="#value" onclick="closeNav()">大切にすること</a></li>
+      <li><a href="#sake" onclick="closeNav()">合わせる酒</a></li>
       <li><a href="#business" onclick="closeNav()">やること</a></li>
+      <li><a href="#join" onclick="closeNav()">一緒に関わる</a></li>
+      <li><a href="#news" onclick="closeNav()">お知らせ</a></li>
       <li><a href="#profile" onclick="closeNav()">会社概要</a></li>
       <li><a href="#members" onclick="closeNav()">メンバー</a></li>
       <li><a href="#contact" onclick="closeNav()">お問い合わせ</a></li>
@@ -485,7 +468,8 @@
   <span class="status-badge">法人設立準備中</span>
   <img class="hero-logo" src="assets/logo.png" alt="知多壱 ブランドロゴ">
   <div class="hero-copy">
-    <h1>知多半島の未来を耕す、<br>蒸留プロジェクト始動</h1>
+    <h1>この土地から、<br>次の産業を。</h1>
+    <p class="hero-sub">知多半島・南知多町で、サトウキビを育て、<br>サトウキビ酒づくりを目指しています。</p>
     <div class="terroir">THE TERROIR OF CHITA</div>
   </div>
   <div class="scroll-cue">S C R O L L</div>
@@ -573,30 +557,106 @@
   </div>
 </section>
 
+<section id="value">
+  <div class="section-inner">
+    <span class="section-tag">OUR VALUE</span>
+    <h2 class="section-title">大切にすること</h2>
+    <div class="mission-statement value-statement">
+      <p>地域の未来のためになる方へ。<br><span class="accent">信頼を、壱歩ずつ積み重ねる。</span></p>
+    </div>
+  </div>
+</section>
+
+<section class="sake-section" id="sake">
+  <div class="section-inner">
+    <span class="section-tag">SUGARCANE SPIRITS</span>
+    <h2 class="section-title">サトウキビ酒<br>「合わせる酒」</h2>
+    <p class="section-lead">
+      耕作放棄地で育てたサトウキビから、お酒をつくることを目指しています。<br>
+      醸造してつくるシュガーワインと、蒸留してつくるラム。<br>
+      この二つを、わたしたちは「サトウキビ酒」と呼んでいます。
+    </p>
+    <div class="concept-box">
+      <p class="concept-head"><span class="nb">お酒に人が</span><span class="nb">合わせるのではなく、</span><br><span class="accent">お酒が人に合わせる。</span></p>
+      <ul class="concept-list">
+        <li><span>食材に</span>合わせる</li>
+        <li><span>酵母に</span>合わせる</li>
+        <li><span>割り方に</span>合わせる</li>
+        <li><span>人に</span>合わせる</li>
+        <li><span>土地に</span>合わせる</li>
+      </ul>
+      <p class="concept-foot">料理や飲む人、その日の場面に合わせてつくり分けられる、知多半島ならではのお酒を目指します。</p>
+    </div>
+    <p class="source-note">※現在、酒類製造免許の取得に向けて準備中です。お酒の製造・販売はまだ行っていません。</p>
+  </div>
+</section>
+
 <section id="business">
   <div class="section-inner">
     <span class="section-tag">WHAT WE WILL DO</span>
     <h2 class="section-title">わたしたちのやること</h2>
     <p class="section-lead">
-      まだ準備の段階だからこそ、これから何をやるのかを明確にします。
+      まだ準備の段階だからこそ、これから何をやるのかを明確にします。<br>
+      畑から一杯になるまでを、知多半島の中でつくります。
     </p>
     <div class="cards">
       <div class="card">
         <span class="num">01</span>
-        <h3>地域一次産業との連携</h3>
-        <p>地域の生産者や産地と対話を重ね、そこにある資源と課題を丁寧に理解します。</p>
+        <h3>サトウキビを育てる</h3>
+        <p>担い手を失った耕作放棄地をお借りして、サトウキビを育てます。地域の生産者と対話を重ねながら、畑を一枚ずつ取り戻していきます。</p>
       </div>
       <div class="card">
         <span class="num">02</span>
-        <h3>雇用創出モデルの構築</h3>
-        <p>一次産業に新たな雇用の機会を生み出す事業モデルを、事業計画としてかたちにします。</p>
+        <h3>サトウキビ酒をつくる</h3>
+        <p>酒類製造免許の取得を目指し、育てたサトウキビからシュガーワインとラムをつくる体制を整えます。畑からお酒までを、地域の新しい仕事にします。</p>
       </div>
       <div class="card">
         <span class="num">03</span>
-        <h3>段階的な事業化</h3>
-        <p>関係者との協議・体制づくりを進めながら、着実に事業を立ち上げていきます。</p>
+        <h3>土地と暮らしを手入れする</h3>
+        <p>放置された竹林や森の整備、空き家の改修、学びの場づくりなど、お酒づくりと一緒に、地域の資源を少しずつ活かしていきます。</p>
       </div>
     </div>
+  </div>
+</section>
+
+<section class="bg-black" id="join">
+  <div class="section-inner">
+    <span class="section-tag">JOIN US</span>
+    <h2 class="section-title">一緒に関わる</h2>
+    <p class="section-lead">
+      サトウキビが育ち、一杯のお酒になるまで。<br>
+      その歩みを、一緒に見届けてください。
+    </p>
+    <div class="join-grid">
+      <div class="join-card">
+        <span class="num">01</span>
+        <h3>Instagramで見守る</h3>
+        <p>畑の変化や、関わる人たちのことを発信しています。</p>
+        <a class="join-btn" href="https://www.instagram.com/chitaichi_/" target="_blank" rel="noopener">@chitaichi_ をフォロー</a>
+      </div>
+      <div class="join-card">
+        <span class="num">02</span>
+        <h3>畑に来る</h3>
+        <p>畑の手伝いや収穫など、関わっていただける機会を準備しています。決まり次第お知らせします。</p>
+      </div>
+      <div class="join-card">
+        <span class="num">03</span>
+        <h3>一緒に取り組む</h3>
+        <p>土地や空き家のこと、協業のご相談など、地域の方・企業の方からのご連絡をお待ちしています。</p>
+        <a class="join-btn" href="#contact">お問い合わせへ</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="news">
+  <div class="section-inner">
+    <span class="section-tag">NEWS</span>
+    <h2 class="section-title">お知らせ</h2>
+    <ul class="news-list">
+      <li><time>2026.11</time><p>株式会社知多壱を設立予定です。</p></li>
+      <li><time>2026.10</time><p>AICHI STARTUP BATTLE 2026 のアクセラレーションステージに参加しています。</p></li>
+    </ul>
   </div>
 </section>
 
@@ -605,14 +665,15 @@
     <span class="section-tag">COMPANY PROFILE</span>
     <h2 class="section-title">会社概要</h2>
     <p class="section-lead">
-      株式会社知多壱は、一次産業に新たな雇用の機会を生み出す事業体として、現在設立の準備を進めている段階です。
+      株式会社知多壱は、知多半島の一次産業に新たな産業と雇用を生み出す事業体として、現在設立の準備を進めている段階です。
       正式な法人登記に先立ち、事業計画の検討状況を公開しています。
     </p>
     <table class="profile-table">
       <tr><th>会社名</th><td>株式会社知多壱（設立準備中）<span class="note-pending">設立前</span></td></tr>
-      <tr><th>事業目的</th><td>一次産業と連携した新たな雇用創出事業の企画・運営</td></tr>
+      <tr><th>設立</th><td>2026年11月（予定）</td></tr>
+      <tr><th>事業内容</th><td>サトウキビの栽培、サトウキビ酒（シュガーワイン・ラム）の製造（酒類製造免許の取得に向けて準備中）、耕作放棄地・竹林・空き家の活用 ほか</td></tr>
+      <tr><th>活動地域</th><td>愛知県知多半島（南知多町）</td></tr>
       <tr><th>現在のステータス</th><td>法人設立準備中<span class="note-pending">準備段階</span></td></tr>
-      <tr><th>取り組み方針</th><td>地域の一次産業の担い手と連携しながら、新たな雇用の受け皿となる事業モデルを検討中</td></tr>
       <tr><th>所在地・代表者</th><td>詳細は法人設立の確定後に公開いたします</td></tr>
     </table>
   </div>
@@ -690,23 +751,13 @@
 
 <footer>
   <div class="gold-line"></div>
+  <p class="alcohol-note">20歳未満の飲酒は法律で禁止されています。<br>知多壱は現在、酒類製造免許の取得を目指して準備を進めている段階で、お酒の製造・販売は行っていません。</p>
   &copy; 2026 株式会社知多壱（設立準備中） All Rights Reserved.
 </footer>
 
 </div><!-- /.site-frame -->
 
 <script>
-  function ageConfirm(isAdult){
-    if(isAdult){
-      var gate = document.getElementById('age-gate');
-      gate.classList.add('gate-hidden');
-      document.body.classList.remove('gate-lock');
-      setTimeout(function(){ gate.style.display = 'none'; }, 650);
-    } else {
-      document.getElementById('gate-question').style.display = 'none';
-      document.getElementById('gate-denied').style.display = 'block';
-    }
-  }
   function toggleNav(){
     var btn = document.getElementById('navToggle');
     var panel = document.getElementById('navPanel');
