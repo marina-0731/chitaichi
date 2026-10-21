@@ -5,6 +5,7 @@
   python3 i18n/build.py extract   # 訳す文章を i18n/ja.json に書き出す
   python3 i18n/build.py build     # i18n/<言語>.json の訳文から各言語のページを作る
   python3 i18n/build.py check     # 訳が足りない文章・古くなった訳を一覧にする
+  python3 i18n/build.py sitemap   # sitemap.xml だけを書き出す（build でも書き出される）
 
 日本語のページを直したら extract → 各言語の JSON に訳を足す → build の順で更新する。
 訳は「日本語の原文 → 訳文」の対応で持つので、原文が少しでも変わると、その文は訳し直しが必要になる
@@ -221,11 +222,29 @@ def build():
         sys.exit(1)
 
 
+def sitemap():
+    """全言語のページと、言語どうしの対応（hreflang）を sitemap.xml に書き出す。"""
+    import datetime
+    today = datetime.date.today().isoformat()
+    urls = [(lang, f'{SITE}/{folder}/' if folder else f'{SITE}/') for lang, folder, _, _ in LANGS]
+    alts = ''.join(f'    <xhtml:link rel="alternate" hreflang="{l}" href="{u}"/>\n' for l, u in urls)
+    alts += f'    <xhtml:link rel="alternate" hreflang="x-default" href="{SITE}/"/>\n'
+    body = ''.join(f'  <url>\n    <loc>{u}</loc>\n    <lastmod>{today}</lastmod>\n{alts}  </url>\n' for _, u in urls)
+    xml = ('<?xml version="1.0" encoding="UTF-8"?>\n'
+           '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">\n'
+           + body + '</urlset>\n')
+    (ROOT / 'sitemap.xml').write_text(xml, encoding='utf-8')
+    print(f'sitemap.xml に {len(urls)} ページを書き出しました')
+
+
 if __name__ == '__main__':
     cmd = sys.argv[1] if len(sys.argv) > 1 else 'build'
     if cmd == 'extract':
         extract()
     elif cmd == 'check':
         sys.exit(0 if check() else 1)
+    elif cmd == 'sitemap':
+        sitemap()
     else:
         build()
+        sitemap()
