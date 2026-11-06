@@ -85,5 +85,11 @@ python3 i18n/build.py check     # 訳がない文章を一覧にする
 python3 i18n/build.py build     # 各言語のページを作り直す
 ```
 
+`build` は、全言語のページの一覧 `sitemap.xml`（検索エンジン向け。言語どうしの対応も入れる）も一緒に書き出す。言語を足したら `i18n/build.py` の `LANGS` に加えるだけで、sitemap にも入る。`robots.txt` は sitemap の場所を検索エンジンに知らせるためのもの。
+
+## 検索の計測
+
+Google Search Console に「ドメイン」として chitaichi.co.jp を登録し、sitemap.xml を送信している。どの言葉で検索結果に出たか（表示回数・クリック数・順位）は、Search Console の「検索パフォーマンス」で見る。
+
 訳文は「日本語の原文 → 訳文」の対応で持つ。原文が1文字でも変わると、その文は訳し直しになり、訳がないうちは build が止まる（日本語が混ざったページを出さないため）。`data-noi18n` を付けた要素（言語メニュー、メンバーの名前）は訳さない。
 
