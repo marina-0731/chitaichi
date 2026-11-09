@@ -185,7 +185,9 @@
   .hero-cf-card:hover{transform:translateY(-2px);box-shadow:0 18px 40px rgba(0,0,0,0.18);}
   .hero-cf-card img{display:block;width:100%;height:auto;aspect-ratio:3/2;}
   .hero-cf-body{padding:16px 18px 20px;}
-  .hero-cf-label{display:block;font-size:0.7rem;letter-spacing:0.18em;color:var(--gold);font-weight:700;margin-bottom:6px;}
+  .hero-cf-meta{display:flex;align-items:center;font-size:0.7rem;font-weight:700;margin-bottom:6px;}
+  .hero-cf-label{letter-spacing:0.18em;color:var(--gold);}
+  .hero-cf-date{font-size:0.82rem;margin-left:12px;padding-left:12px;border-left:1px solid rgba(184,147,63,0.55);color:var(--red-deep);letter-spacing:0.1em;}
   .hero-cf-title{font-size:clamp(0.88rem,2.4vw,1rem);font-weight:700;line-height:1.6;letter-spacing:0.03em;margin-bottom:14px;}
   .hero-cf{display:block;padding:12px 16px;background:var(--red);color:var(--white);font-size:clamp(0.8rem,2.4vw,0.92rem);letter-spacing:0.06em;text-align:center;text-wrap:balance;border:1px solid var(--red);transition:background .2s,color .2s;}
   .hero-cf-card:hover .hero-cf{background:transparent;color:var(--red-deep);border-color:var(--red-deep);}
@@ -553,7 +555,7 @@
     <a class="hero-cf-card" href="https://camp-fire.jp/projects/987773/preview?token=28cl3p1u" target="_blank" rel="noopener">
       <img src="../assets/crowdfunding.jpg" alt="Immagine principale del crowdfunding" width="1200" height="800">
       <div class="hero-cf-body">
-        <span class="hero-cf-label">CAMPFIRE</span>
+        <div class="hero-cf-meta"><span class="hero-cf-label">CAMPFIRE</span><p class="hero-cf-date">Dal 19 novembre</p></div>
         <p class="hero-cf-title">La nuova sfida di un diciannovenne: Chitaichi, un nuovo liquore di canna da zucchero nato dai terreni abbandonati di Minamichita</p>
         <span class="hero-cf">Vai alla pagina del crowdfunding</span>
       </div>
