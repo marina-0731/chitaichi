@@ -181,8 +181,14 @@
     letter-spacing:0.32em;
     font-weight:700;
   }
-  .hero-cf{display:inline-block;max-width:100%;margin-top:26px;padding:13px 22px;background:var(--red);color:var(--white);font-size:clamp(0.8rem,2.4vw,0.92rem);letter-spacing:0.06em;text-wrap:balance;border:1px solid var(--red);transition:background .2s,color .2s;}
-  .hero-cf:hover{background:transparent;color:var(--red-deep);border-color:var(--red-deep);}
+  .hero-cf-card{display:block;width:min(100%,520px);margin:30px auto 0;background:#fff;border:1px solid rgba(184,147,63,0.55);box-shadow:0 14px 34px rgba(0,0,0,0.12);text-align:left;color:var(--black);transition:transform .2s,box-shadow .2s;}
+  .hero-cf-card:hover{transform:translateY(-2px);box-shadow:0 18px 40px rgba(0,0,0,0.18);}
+  .hero-cf-card img{display:block;width:100%;height:auto;aspect-ratio:3/2;}
+  .hero-cf-body{padding:16px 18px 20px;}
+  .hero-cf-label{display:block;font-size:0.7rem;letter-spacing:0.18em;color:var(--gold);font-weight:700;margin-bottom:6px;}
+  .hero-cf-title{font-size:clamp(0.88rem,2.4vw,1rem);font-weight:700;line-height:1.6;letter-spacing:0.03em;margin-bottom:14px;}
+  .hero-cf{display:block;padding:12px 16px;background:var(--red);color:var(--white);font-size:clamp(0.8rem,2.4vw,0.92rem);letter-spacing:0.06em;text-align:center;text-wrap:balance;border:1px solid var(--red);transition:background .2s,color .2s;}
+  .hero-cf-card:hover .hero-cf{background:transparent;color:var(--red-deep);border-color:var(--red-deep);}
   .hero-white .divider{width:64px;height:2px;background:var(--red);margin:30px auto;}
   .scroll-cue{
     position:absolute;bottom:28px;left:50%;transform:translateX(-50%);
@@ -545,7 +551,14 @@
     <h1>从这片土地，<br>孕育下一个产业。</h1>
     <p class="hero-sub">我们在知多半岛南知多町种植甘蔗，<br>致力于酿造甘蔗酒。</p>
     <div class="terroir">THE TERROIR OF CHITA</div>
-    <a class="hero-cf" href="https://camp-fire.jp/projects/987773/preview?token=28cl3p1u" target="_blank" rel="noopener">查看众筹页面</a>
+    <a class="hero-cf-card" href="https://camp-fire.jp/projects/987773/preview?token=28cl3p1u" target="_blank" rel="noopener">
+      <img src="../assets/crowdfunding.jpg" alt="众筹主视觉图片" width="1200" height="800">
+      <div class="hero-cf-body">
+        <span class="hero-cf-label">CAMPFIRE</span>
+        <p class="hero-cf-title">19岁的新挑战！诞生于南知多弃耕地的全新甘蔗酒“知多壱”</p>
+        <span class="hero-cf">查看众筹页面</span>
+      </div>
+    </a>
   </div>
   <div class="scroll-cue">S C R O L L</div>
 </section>
